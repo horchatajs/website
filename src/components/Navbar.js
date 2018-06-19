@@ -7,7 +7,7 @@ import github from '../img/github.svg';
 
 const Navbar = () => (
   <nav
-    className="navbar is-transparent"
+    className="navbar is-vertical-spaced is-transparent"
     role="navigation"
     aria-label="main navigation"
   >

@@ -4,4 +4,9 @@
 $navbar-height: 3rem;
 $navbar-item-img-max-height: 2.25rem;
 
+// Helpers
+.is-vertical-spaced {
+  padding: 1rem 0;
+}
+
 @import '~bulma';

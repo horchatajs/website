@@ -6,8 +6,8 @@ import Navbar from '../components/Navbar';
 import './all.scss';
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+  <div className="container is-fullhd">
+    <Helmet title="HorchataJS" />
     <Navbar />
     <div>{children()}</div>
   </div>
