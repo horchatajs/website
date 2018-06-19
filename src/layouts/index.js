@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
   <div className="container is-fullhd">
     <Helmet title="HorchataJS" />
     <Navbar />
-    <div>{children()}</div>
+    {children()}
   </div>
 );
 
