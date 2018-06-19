@@ -1,6 +1,6 @@
-# HorchataJS Website 🔗
+# Website 🔗
 
-Sitio web oficial de la comunidad HorchataJS
+Sitio web oficial de la comunidad HorchataJS.
 
 ## Development
 
