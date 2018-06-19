@@ -5,8 +5,8 @@ Sitio web oficial de la comunidad HorchataJS
 ## Development
 
 ```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
+$ git clone git@github.com:horchatajs/website.git
+$ cd website
 $ yarn
 $ npm run develop
 ```
