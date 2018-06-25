@@ -10,8 +10,13 @@ $yellow-dark: #ffa70d;
 $navbar-background-color: transparent;
 $navbar-height: 4rem;
 $navbar-item-img-max-height: 2.25rem;
-$primary: $yellow-dark;
-$link: $yellow-dark;
+$primary: $yellow;
+$link: $black;
+
+// Helpers
+.is-circle {
+  border-radius: 100%;
+}
 
 @import '~bulma';
 
@@ -20,4 +25,8 @@ body {
   min-height: 100vh;
   background: $yellow-light;
   border-top: 4px solid $primary;
+}
+
+.content a {
+  border-bottom: 1px solid $black;
 }
