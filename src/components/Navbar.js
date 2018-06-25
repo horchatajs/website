@@ -37,21 +37,21 @@ const Navbar = () => (
         </Link> */}
       </div>
       <div className="navbar-end">
-        <Link to="/" className="navbar-item">
+        <a href="https://www.facebook.com/horchatajs/" className="navbar-item">
           <figure className="image is-16x16">
             <img src={facebook} />
           </figure>
-        </Link>
-        <Link to="/" className="navbar-item">
+        </a>
+        <a href="https://twitter.com/HorchataJS" className="navbar-item">
           <figure className="image is-16x16">
             <img src={twitter} />
           </figure>
-        </Link>
-        <Link to="/" className="navbar-item">
+        </a>
+        <a href="https://github.com/horchatajs" className="navbar-item">
           <figure className="image is-16x16">
             <img src={github} />
           </figure>
-        </Link>
+        </a>
       </div>
     </div>
   </nav>
