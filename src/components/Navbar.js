@@ -29,12 +29,12 @@ const Navbar = () => (
     </div>
     <div className="navbar-menu">
       <div className="navbar-start">
-        <Link to="/participa" className="navbar-item">
+        {/* <Link to="/participa" className="navbar-item">
           Participa
         </Link>
         <Link to="/blog" className="navbar-item">
           Blog
-        </Link>
+        </Link> */}
       </div>
       <div className="navbar-end">
         <Link to="/" className="navbar-item">
