@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "author": "Ricardo Ramirez",
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.7.1",
+    "classnames": "^2.2.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^6.0.0",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify": "^1.0.19",
