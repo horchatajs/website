@@ -28,9 +28,9 @@ const IndexPage = props => {
         </a>
       </section>
       <section className="section has-background-white">
-        <div className="columns">
-          <div className="column is-half">
-            <div className="content">
+        <div className="content">
+          <div className="columns">
+            <div className="column is-half">
               <h2 className="subtitle has-text-black has-text-weight-semibold">
                 Sobre nosotros
               </h2>
@@ -46,9 +46,55 @@ const IndexPage = props => {
                 </a>.
               </p>
             </div>
+            <div className="column is-half">{membersAvatar}</div>
           </div>
-          <div className="column is-half">{membersAvatar}</div>
         </div>
+        <hr />
+        <div className="content">
+          <h2 className="subtitle has-text-black has-text-weight-semibold">
+            Participa
+          </h2>
+          <div className="columns">
+            <div className="column is-half">
+              <h3 className="is-size-5 has-text-black">Da una plática</h3>
+              <p>
+                HorchataJS es un espacio gratuito y abierto para aprender y
+                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+              </p>
+            </div>
+            <div className="column is-half">
+              <h3 className="is-size-5 has-text-black">
+                Ayuda en la organización
+              </h3>
+              <p>
+                HorchataJS es un espacio gratuito y abierto para aprender y
+                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="content">
+          <div className="columns">
+            <div className="column is-half">
+              <h2 className="subtitle has-text-black has-text-weight-semibold">
+                Patrocina
+              </h2>
+              <p>
+                HorchataJS es un espacio gratuito y abierto para aprender y
+                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section has-text-centered">
+        <a
+          href="http://slack.horchatajs.com/"
+          className="button is-primary is-outlined is-medium has-text-black"
+        >
+          <span>slack.horchatajs.com</span>
+        </a>
       </section>
     </div>
   );
