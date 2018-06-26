@@ -4,6 +4,7 @@ import logo from '../img/horchatajs-logo.svg';
 import facebook from '../img/facebook.svg';
 import twitter from '../img/twitter.svg';
 import github from '../img/github.svg';
+import instagram from '../img/instagram.svg';
 
 const Navbar = () => (
   <nav
@@ -45,6 +46,11 @@ const Navbar = () => (
         <a href="https://twitter.com/HorchataJS" className="navbar-item">
           <figure className="image is-16x16">
             <img src={twitter} />
+          </figure>
+        </a>
+        <a href="https://www.instagram.com/horchatajs/" className="navbar-item">
+          <figure className="image is-16x16">
+            <img src={instagram} />
           </figure>
         </a>
         <a href="https://github.com/horchatajs" className="navbar-item">
