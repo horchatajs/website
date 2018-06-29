@@ -52,23 +52,32 @@ const IndexPage = props => {
         <hr />
         <div className="content">
           <h2 className="subtitle has-text-black has-text-weight-semibold">
-            Participa
+            Participá
           </h2>
           <div className="columns">
             <div className="column is-half">
               <h3 className="is-size-5 has-text-black">Da una plática</h3>
               <p>
-                HorchataJS es un espacio gratuito y abierto para aprender y
-                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+                Tu plática puede ser acerca de Javascript o temas relacionados a
+                su uso; cualquier experiencia, proyecto o historia es
+                bienvenida. Y no, no necesitas ser alguien experto para dar una
+                plática.
               </p>
+              <a
+                href="https://github.com/horchatajs/platicas"
+                className="button is-black is-outlined"
+              >
+                <span>Información de pláticas</span>
+              </a>
             </div>
             <div className="column is-half">
               <h3 className="is-size-5 has-text-black">
-                Ayuda en la organización
+                Ayudá en la organización
               </h3>
               <p>
-                HorchataJS es un espacio gratuito y abierto para aprender y
-                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+                Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
+                <a href="http://slack.horchatajs.com/">Slack</a> o participa en{' '}
+                <a href="https://github.com/horchatajs">GitHub</a>.
               </p>
             </div>
           </div>
@@ -78,12 +87,17 @@ const IndexPage = props => {
           <div className="columns">
             <div className="column is-half">
               <h2 className="subtitle has-text-black has-text-weight-semibold">
-                Patrocina
+                Patrociná
               </h2>
               <p>
-                HorchataJS es un espacio gratuito y abierto para aprender y
-                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+                ¿Te interesa patrocinar un evento de la comunidad? ¡Escribínos!
               </p>
+              <a
+                href="mailto:horchatajs@gmail.com"
+                className="button is-black is-outlined"
+              >
+                <span>Información sobre patrocinios</span>
+              </a>
             </div>
           </div>
         </div>
