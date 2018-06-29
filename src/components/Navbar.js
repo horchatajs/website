@@ -50,7 +50,7 @@ class Navbar extends Component {
           Blog
         </Link> */}
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end is-flex-touch is-justify-center">
             <a
               href="https://www.facebook.com/horchatajs/"
               className="navbar-item"
