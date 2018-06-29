@@ -4,16 +4,18 @@
 $black: #000;
 $yellow: #ffda1a;
 $yellow-light: #fffbe7;
+$yellow-dark: #ffa70d;
 
 // Overrides
 $navbar-background-color: transparent;
-$navbar-height: 3rem;
+$navbar-height: 4rem;
 $navbar-item-img-max-height: 2.25rem;
-$primary: $black;
+$primary: $yellow;
+$link: $black;
 
 // Helpers
-.is-vertical-spaced {
-  padding: 1rem 0;
+.is-circle {
+  border-radius: 100%;
 }
 
 @import '~bulma';
@@ -21,9 +23,10 @@ $primary: $black;
 // Styles
 body {
   min-height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(125, 185, 232, 0) 0%,
-    rgba($yellow-light, 1) 100%
-  );
+  background: $yellow-light;
+  border-top: 4px solid $primary;
+}
+
+.content a {
+  border-bottom: 1px solid $black;
 }

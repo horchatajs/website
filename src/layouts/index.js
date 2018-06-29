@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import './all.scss';
 
 const TemplateWrapper = ({ children }) => (
-  <div className="container is-fullhd">
+  <div className="container">
     <Helmet title="HorchataJS" />
     <Navbar />
     {children()}

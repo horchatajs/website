@@ -4,6 +4,7 @@ import logo from '../img/horchatajs-logo.svg';
 import facebook from '../img/facebook.svg';
 import twitter from '../img/twitter.svg';
 import github from '../img/github.svg';
+import instagram from '../img/instagram.svg';
 
 const Navbar = () => (
   <nav
@@ -29,29 +30,34 @@ const Navbar = () => (
     </div>
     <div className="navbar-menu">
       <div className="navbar-start">
-        <Link to="/participa" className="navbar-item">
+        {/* <Link to="/participa" className="navbar-item">
           Participa
         </Link>
         <Link to="/blog" className="navbar-item">
           Blog
-        </Link>
+        </Link> */}
       </div>
       <div className="navbar-end">
-        <Link to="/" className="navbar-item">
+        <a href="https://www.facebook.com/horchatajs/" className="navbar-item">
           <figure className="image is-16x16">
             <img src={facebook} />
           </figure>
-        </Link>
-        <Link to="/" className="navbar-item">
+        </a>
+        <a href="https://twitter.com/HorchataJS" className="navbar-item">
           <figure className="image is-16x16">
             <img src={twitter} />
           </figure>
-        </Link>
-        <Link to="/" className="navbar-item">
+        </a>
+        <a href="https://www.instagram.com/horchatajs/" className="navbar-item">
+          <figure className="image is-16x16">
+            <img src={instagram} />
+          </figure>
+        </a>
+        <a href="https://github.com/horchatajs" className="navbar-item">
           <figure className="image is-16x16">
             <img src={github} />
           </figure>
-        </Link>
+        </a>
       </div>
     </div>
   </nav>
