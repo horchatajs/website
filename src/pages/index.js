@@ -1,5 +1,6 @@
 import React from 'react';
 
+import slack from '../img/slack.svg';
 import Avatar from '../components/Avatar';
 
 const avatarList = (list = [], size = 'is-48x48') => {
@@ -56,15 +57,15 @@ const IndexPage = props => {
           </h2>
           <div className="columns">
             <div className="column is-half">
-              <h3 className="is-size-5 has-text-black">Da una plática</h3>
+              <h3 className="is-size-5 has-text-black">Da una charla</h3>
               <p>
-                Tu plática puede ser acerca de Javascript o temas relacionados a
+                Tu charla puede ser acerca de Javascript o temas relacionados a
                 su uso; cualquier experiencia, proyecto o historia es
                 bienvenida. Y no, no necesitas ser alguien experto para dar una
-                plática.
+                charla.
               </p>
               <a
-                href="https://github.com/horchatajs/platicas"
+                href="https://github.com/horchatajs/charlas"
                 className="button is-black is-outlined"
               >
                 <span>Información de pláticas</span>
@@ -76,7 +77,7 @@ const IndexPage = props => {
               </h3>
               <p>
                 Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
-                <a href="http://slack.horchatajs.com/">Slack</a> o participa en{' '}
+                <a href="http://slack.horchatajs.com/">Slack</a> o participá en{' '}
                 <a href="https://github.com/horchatajs">GitHub</a>.
               </p>
             </div>
@@ -87,16 +88,16 @@ const IndexPage = props => {
           <div className="columns">
             <div className="column is-half">
               <h2 className="subtitle has-text-black has-text-weight-semibold">
-                Patrociná
+                Patrocinio
               </h2>
               <p>
                 ¿Te interesa patrocinar un evento de la comunidad? ¡Escribínos!
               </p>
               <a
-                href="mailto:horchatajs@gmail.com"
+                href="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
                 className="button is-black is-outlined"
               >
-                <span>Información sobre patrocinios</span>
+                <span>Contacto sobre patrocinios</span>
               </a>
             </div>
           </div>
@@ -107,6 +108,9 @@ const IndexPage = props => {
           href="http://slack.horchatajs.com/"
           className="button is-primary is-outlined is-medium has-text-black"
         >
+          <figure className="image is-24x24" style={{ marginRight: 10 }}>
+            <img src={slack} />
+          </figure>
           <span>slack.horchatajs.com</span>
         </a>
       </section>
