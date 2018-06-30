@@ -24,6 +24,8 @@ const IndexPage = props => {
         <a
           href="https://www.meetup.com/es-ES/horchatajs/"
           className="button is-primary is-large has-text-black"
+          target="_blank"
+          rel="noopener"
         >
           <span>Registrate</span>
         </a>
@@ -67,6 +69,8 @@ const IndexPage = props => {
               <a
                 href="https://github.com/horchatajs/charlas"
                 className="button is-black is-outlined"
+                target="_blank"
+                rel="noopener"
               >
                 <span>Información de pláticas</span>
               </a>
@@ -96,6 +100,8 @@ const IndexPage = props => {
               <a
                 href="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
                 className="button is-black is-outlined"
+                target="_blank"
+                rel="noopener"
               >
                 <span>Contacto sobre patrocinios</span>
               </a>
@@ -107,6 +113,8 @@ const IndexPage = props => {
         <a
           href="http://slack.horchatajs.com/"
           className="button is-primary is-outlined is-medium has-text-black"
+          target="_blank"
+          rel="noopener"
         >
           <figure className="image is-24x24" style={{ marginRight: 10 }}>
             <img src={slack} />

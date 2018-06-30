@@ -54,12 +54,19 @@ class Navbar extends Component {
             <a
               href="https://www.facebook.com/horchatajs/"
               className="navbar-item"
+              target="_blank"
+              rel="noopener"
             >
               <figure className="image is-16x16">
                 <img src={facebook} />
               </figure>
             </a>
-            <a href="https://twitter.com/HorchataJS" className="navbar-item">
+            <a
+              href="https://twitter.com/HorchataJS"
+              className="navbar-item"
+              target="_blank"
+              rel="noopener"
+            >
               <figure className="image is-16x16">
                 <img src={twitter} />
               </figure>
@@ -67,12 +74,19 @@ class Navbar extends Component {
             <a
               href="https://www.instagram.com/horchatajs/"
               className="navbar-item"
+              target="_blank"
+              rel="noopener"
             >
               <figure className="image is-16x16">
                 <img src={instagram} />
               </figure>
             </a>
-            <a href="https://github.com/horchatajs" className="navbar-item">
+            <a
+              href="https://github.com/horchatajs"
+              className="navbar-item"
+              target="_blank"
+              rel="noopener"
+            >
               <figure className="image is-16x16">
                 <img src={github} />
               </figure>
