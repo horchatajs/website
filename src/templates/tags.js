@@ -8,25 +8,31 @@ class TagRoute extends React.Component {
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2>{post.node.frontmatter.title}</h2>
+          <span>{post.node.frontmatter.title}</span>
         </Link>
       </li>
     ));
     const tag = this.props.pathContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`;
+    const tagHeader = `${totalCount} ${
+      totalCount === 1 ? 'publicación' : 'publicaciones'
+    } con la etiqueta “${tag}”`;
 
     return (
-      <div>
+      <div className="container is-content">
         <Helmet title={`${tag} | ${title}`} />
-        <h3>{tagHeader}</h3>
-        <ul>{postLinks}</ul>
-        <p>
-          <Link to="/tags/">Browse all tags</Link>
-        </p>
+        <section className="section">
+          <div className="content">
+            <h1 className="is-size-3 has-text-black has-text-weight-bold">
+              {tagHeader}
+            </h1>
+            <ul>{postLinks}</ul>
+            <p>
+              <Link to="/tags/">Ver todas las etiquetas</Link>
+            </p>
+          </div>
+        </section>
       </div>
     );
   }
