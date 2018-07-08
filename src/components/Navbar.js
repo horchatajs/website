@@ -43,12 +43,9 @@ class Navbar extends Component {
         </div>
         <div className={`navbar-menu ${isOpen && 'is-active'}`}>
           <div className="navbar-start">
-            {/* <Link to="/participa" className="navbar-item">
-          Participa
-        </Link>
-        <Link to="/blog" className="navbar-item">
-          Blog
-        </Link> */}
+            <Link to="/blog" className="navbar-item">
+              Blog
+            </Link>
           </div>
           <div className="navbar-end is-flex-touch is-justify-center">
             <a
