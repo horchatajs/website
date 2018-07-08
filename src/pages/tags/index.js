@@ -11,18 +11,30 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
-    <Helmet title={`Tags | ${title}`} />
-    <h1>Tags</h1>
-    <ul>
-      {group.map(tag => (
-        <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            {tag.fieldValue} ({tag.totalCount})
-          </Link>
-        </li>
-      ))}
-    </ul>
+  <div className="container is-content">
+    <Helmet title={`Etiquetas | ${title}`} />
+    <section className="section">
+      <div className="content">
+        <h1 className="is-size-3 has-text-black has-text-weight-bold">
+          Etiquetas
+        </h1>
+      </div>
+      {group && group.length ? (
+        <div className="tags">
+          {group.map(tag => (
+            <Link
+              className="tag is-black"
+              to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              key={tag.fieldValue}
+            >
+              <span>
+                {tag.fieldValue} ({tag.totalCount})
+              </span>
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </section>
   </div>
 );
 
