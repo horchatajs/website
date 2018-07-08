@@ -8,31 +8,41 @@ import Content, { HTMLContent } from '../components/Content';
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
+  date,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <div>
+    <div className="container is-content">
       {helmet || ''}
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <PostContent content={content} />
-      {tags && tags.length ? (
-        <div>
-          <h4>Tags</h4>
-          <ul>
-            {tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
+      <section className="section">
+        <div className="content">
+          <h1 className="is-size-3 has-text-black has-text-weight-bold">
+            {title}
+          </h1>
+          <p className="has-text-black">
+            Publicado el <span>{date}</span>
+          </p>
+          <PostContent content={content} />
         </div>
-      ) : null}
+        <hr className="has-background-black" />
+        {tags && tags.length ? (
+          <div className="tags">
+            {tags.map(tag => (
+              <Link
+                className="tag is-black"
+                to={`/tags/${kebabCase(tag)}/`}
+                key={tag + `tag`}
+              >
+                <span>{tag}</span>
+              </Link>
+            ))}
+          </div>
+        ) : null}
+      </section>
     </div>
   );
 };
@@ -40,7 +50,6 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 };
@@ -52,8 +61,8 @@ const BlogPost = ({ data }) => {
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
       helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+      date={post.frontmatter.date}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
@@ -74,9 +83,8 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "D/M/YYYY")
         title
-        description
         tags
       }
     }

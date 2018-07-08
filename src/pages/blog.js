@@ -8,19 +8,21 @@ export default class BlogPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div>
+      <div className="container is-content">
         {posts.map(({ node: post }) => (
-          <div key={post.id}>
-            <p>
-              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-              <span> &bull; </span>
-              <small>{post.frontmatter.date}</small>
-            </p>
-            <p>
-              {post.excerpt}
-              <Link to={post.fields.slug}>Keep Reading →</Link>
-            </p>
-          </div>
+          <Link className="post is-block" to={post.fields.slug} key={post.id}>
+            <section className="section is-rounded has-background-white has-shadow has-shadow-hovered">
+              <div className="content">
+                <h2 className="is-size-4 has-text-black has-text-weight-bold">
+                  {post.frontmatter.title}
+                </h2>
+                <p>{post.excerpt}</p>
+                <p className="has-text-grey-light">
+                  Publicado el <span>{post.frontmatter.date}</span>
+                </p>
+              </div>
+            </section>
+          </Link>
         ))}
       </div>
     );
@@ -43,7 +45,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 150)
           id
           fields {
             slug
@@ -51,7 +53,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "D/M/YYYY")
           }
         }
       }
