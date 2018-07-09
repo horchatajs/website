@@ -2,7 +2,7 @@
 
 Sitio web oficial de la comunidad HorchataJS.
 
-## Development
+## Desarrollar local
 
 ```
 $ git clone git@github.com:horchatajs/website.git
@@ -11,9 +11,6 @@ $ yarn
 $ npm run develop
 ```
 
-## CMS Test
+## Contribuir
 
-```
-$ npm run build
-$ npm run serve
-```
+Leer [CONTRIBUTING.md](https://github.com/horchatajs/website/blob/master/.github/CONTRIBUTING.md)
