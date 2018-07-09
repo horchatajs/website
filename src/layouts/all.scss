@@ -13,23 +13,44 @@ $navbar-item-img-max-height: 2.25rem;
 $primary: $yellow;
 $link: $black;
 
+@import '~bulma';
+
 // Helpers
 .is-circle {
   border-radius: 100%;
 }
+.is-rounded {
+  border-radius: 4px;
+}
 .is-justify-center {
   justify-content: center;
 }
-
-@import '~bulma';
+.is-content {
+  max-width: 48rem;
+}
+.has-shadow {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 250ms ease-in;
+}
+.has-shadow-hovered:hover {
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
 
 // Styles
 body {
   min-height: 100vh;
   background: $yellow-light;
   border-top: 4px solid $primary;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2.5rem;
 }
 
 .content a {
   border-bottom: 1px solid $black;
+}
+
+.post {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }

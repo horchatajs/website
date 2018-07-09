@@ -30,7 +30,7 @@ const IndexPage = props => {
           <span>Registrate</span>
         </a>
       </section>
-      <section className="section has-background-white">
+      <section className="section is-rounded has-background-white has-shadow">
         <div className="content">
           <div className="columns">
             <div className="column is-half">

@@ -33,6 +33,15 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-122015764-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
+    'gatsby-plugin-netlify',
   ],
 };
