@@ -13,4 +13,4 @@ $ npm run develop
 
 ## Contribuir
 
-Leer [CONTRIBUTING.md](https://github.com/horchatajs/website/blob/master/CONTRIBUTING.md)
+Leer [CONTRIBUTING.md](https://github.com/horchatajs/website/blob/master/.github/CONTRIBUTING.md)
