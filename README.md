@@ -20,7 +20,7 @@ yarn
 
 ## Desarrollo
 
-> Antes de iniciar, tenés que cambiar el nombre del archivo `.env.example` a `.env` y colocar tu API Key de Meetup (ver prerrequisitos).
+> Antes de iniciar, tenés que copiar el archivo `.env.example`, renombrarlo a `.env` y colocar tu API Key de Meetup (ver prerrequisitos).
 
 Para iniciar el entorno de desarrollo tenés que ejecutar el siguiente comando:
 
