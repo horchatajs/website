@@ -1,26 +1,20 @@
-require('dotenv').config({
-  path: `.env`,
-});
+require('dotenv').config({ path: `.env` });
 const _ = require('lodash');
 const path = require('path');
 const axios = require('axios');
 const crypto = require('crypto');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-var meetupMembersConfig = {
-  params: {
-    sign: true,
-    key: process.env.MEETUP_API_KEY,
-    group_urlname: 'horchatajs',
-    desc: true,
-    order: 'joined',
-    page: 40,
-  },
-};
-
+/**
+ * Create all blog post pages
+ *
+ * @param {*} { boundActionCreators, graphql }
+ * @returns
+ */
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
+  // Query data used for posts
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -46,6 +40,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges;
 
+    // Loop every markdown file and create a post page for each one
     posts.forEach(edge => {
       const id = edge.node.id;
       createPage({
@@ -54,25 +49,25 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
         ),
-        // additional data can be passed via context
+        // Pass additional data
         context: {
           id,
         },
       });
     });
 
-    // Tag pages:
     let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
+    // Loop every post and put all found tags into `tags`
     posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
     });
+
     // Eliminate duplicate tags
     tags = _.uniq(tags);
 
-    // Make tag pages
+    // Create a tag page for each tag
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`;
 
@@ -87,6 +82,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   });
 };
 
+/**
+ * Create all blog post nodes
+ *
+ * @param {*} { node, boundActionCreators, getNode }
+ */
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
 
@@ -100,14 +100,35 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   }
 };
 
+/**
+ * Create all avatar member nodes
+ *
+ * @param {*} { boundActionCreators }
+ * @returns
+ */
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
-  const fetchMembers = () =>
-    axios.get('https://api.meetup.com/2/profiles', meetupMembersConfig);
-  const res = await fetchMembers();
+  const meetupProfilesEndpoint = 'https://api.meetup.com/2/profiles';
 
-  res.data.results.map(user => {
+  const meetupProfilesConfig = {
+    params: {
+      sign: true,
+      key: process.env.MEETUP_API_KEY,
+      group_urlname: 'horchatajs',
+      desc: true,
+      order: 'joined',
+      page: 40,
+    },
+  };
+
+  // Fetch members information
+  const fetchMembers = () =>
+    axios.get(meetupProfilesConfig, meetupProfilesEndpoint);
+  const response = await fetchMembers();
+
+  response.data.results.map(user => {
+    // Setup user node
     const userNode = {
       id: `${user.member_id}`,
       parent: `__SOURCE__`,
@@ -122,12 +143,14 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
       },
     };
 
+    // Cryptographic hash needed for the node creation
     const contentDigest = crypto
       .createHash(`md5`)
       .update(JSON.stringify(userNode))
       .digest(`hex`);
     userNode.internal.contentDigest = contentDigest;
 
+    // Create the user node
     createNode(userNode);
   });
 
