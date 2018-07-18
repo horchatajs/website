@@ -3,8 +3,6 @@ module.exports = {
     title: 'HorchataJS',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -19,8 +17,6 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -42,6 +38,10 @@ module.exports = {
         respectDNT: true,
       },
     },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
   ],
 };
