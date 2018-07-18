@@ -32,7 +32,7 @@ Ahora podés acceder al sitio en `localhost:8000`
 
 ## Contribuir
 
-Leé `CONTRIBUTING.md` para más información.
+Leé [`CONTRIBUTING.md`](https://github.com/horchatajs/website/blob/master/.github/CONTRIBUTING.md) para más información.
 
 ## Links
 
