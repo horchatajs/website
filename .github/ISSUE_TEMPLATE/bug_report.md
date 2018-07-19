@@ -11,7 +11,7 @@ Una descripción clara y descriptiva de qué es el error.
 Pasos para reproducir el comportamiento:
 1. Ir a la página '...'
 2. Hacer click en '....'
-4. Ver error en '...'
+3. Ver error en '...'
 
 **Comportamiento esperado**
 Una descripción clara y concisa de lo que esperabas que sucediera.
