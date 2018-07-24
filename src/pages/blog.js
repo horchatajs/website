@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 export default class BlogPage extends React.Component {
   render() {
@@ -9,6 +10,9 @@ export default class BlogPage extends React.Component {
 
     return (
       <div className="container is-content">
+        <Helmet>
+          <title>Blog – HorchataJS</title>
+        </Helmet>
         {posts.map(({ node: post }) => (
           <Link className="post is-block" to={post.fields.slug} key={post.id}>
             <section className="section is-rounded has-background-white has-shadow has-shadow-hovered">

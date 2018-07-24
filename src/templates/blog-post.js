@@ -61,7 +61,7 @@ const BlogPost = ({ data }) => {
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+      helmet={<Helmet title={`${post.frontmatter.title} | HorchataJS`} />}
       date={post.frontmatter.date}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}

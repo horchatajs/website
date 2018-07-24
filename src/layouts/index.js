@@ -7,7 +7,11 @@ import './all.scss';
 
 const TemplateWrapper = ({ children }) => (
   <div className="container">
-    <Helmet title="HorchataJS" />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>HorchataJS – Comunidad de JavaScript en El Salvador</title>
+      <link rel="canonical" href="https://www.horchatajs.com" />
+    </Helmet>
     <Navbar />
     {children()}
   </div>
