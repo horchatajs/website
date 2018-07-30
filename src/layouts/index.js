@@ -14,7 +14,10 @@ const TemplateWrapper = ({ children }) => (
       <meta property="og:url" content="https://www.horchatajs.com" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="HorchataJS" />
-      <meta property="og:image" content={withPrefix('/img/share-logo.png')} />
+      <meta
+        property="og:image"
+        content="https://www.horchatajs.com/img/share-logo.png"
+      />
       <meta property="og:image:width" content="200" />
       <meta property="og:image:height" content="200" />
       <meta
@@ -32,7 +35,10 @@ const TemplateWrapper = ({ children }) => (
         name="twitter:description"
         content="Comunidad de JavaScript en El Salvador"
       />
-      <meta name="twitter:image" content={withPrefix('/img/share-logo.png')} />
+      <meta
+        name="twitter:image"
+        content="https://www.horchatajs.com/img/share-logo.png"
+      />
     </Helmet>
     <Navbar />
     {children()}
