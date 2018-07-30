@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import slack from '../img/slack.svg';
 import Avatar from '../components/Avatar';
@@ -13,10 +14,14 @@ const avatarList = (list = [], size = 'is-48x48') => {
 };
 
 const IndexPage = props => {
+  const site = props.data.site.siteMetadata;
   const members = props.data.allMemberUser.edges;
   const membersAvatar = avatarList(members);
   return (
     <div>
+      <Helmet>
+        <title>{`${site.title} – ${site.description}`}</title>
+      </Helmet>
       <section className="section has-text-centered">
         <h1 className="title is-1 has-text-black has-text-weight-bold">
           Comunidad de JavaScript <br /> en El Salvador
@@ -129,7 +134,13 @@ const IndexPage = props => {
 export default IndexPage;
 
 export const query = graphql`
-  query MemberUserQuery {
+  query MemberUserQueryAndIndex {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     allMemberUser {
       edges {
         node {
