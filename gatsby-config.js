@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'HorchataJS',
+    title: `HorchataJS`,
+    description: `Comunidad de JavaScript en El Salvador`,
+    siteUrl: `https://www.horchatajs.com/`,
+    baseUrl: `/`,
   },
   plugins: [
     {
