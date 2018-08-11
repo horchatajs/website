@@ -1,8 +1,10 @@
 ---
 templateKey: blog-post
-title: ¿Qué es HorchataJS?
+title: ¿Qué es  la comunidad HorchataJS?
 date: 2018-07-08T10:36:10.000Z
-description: HorchataJS es un espacio gratuito y abierto para aprender y compartir sobre JavaScript. 
+description: >-
+  HorchataJS es un espacio gratuito y abierto para aprender y compartir sobre
+  JavaScript.
 tags:
   - horchatajs
   - comunidad
