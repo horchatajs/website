@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: ¿Qué es la comunidad HorchataJS?
+title: ¿Qué es HorchataJS?
 date: 2018-07-08T10:36:10.000Z
 description: >-
   HorchataJS es un espacio gratuito y abierto para aprender y compartir sobre
@@ -13,7 +13,7 @@ Somos una comunidad de desarrolladores en El Salvador que nació en el 2015 con 
 
 ## Misión
 
-Crear eventos, talleres y actividades educativas que beneficien y hagan crecer la comunidad de desarrolladores en El Salvador...
+Crear eventos, talleres y actividades educativas que beneficien y hagan crecer la comunidad de desarrolladores en El Salvador.
 
 ## Visión
 
