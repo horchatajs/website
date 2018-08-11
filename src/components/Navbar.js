@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import { OutboundLink as ExternalLink } from 'react-ga';
 import logo from '../img/horchatajs-logo.svg';
 import facebook from '../img/facebook.svg';
 import twitter from '../img/twitter.svg';
@@ -48,8 +49,9 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="navbar-end is-flex-touch is-justify-center">
-            <a
-              href="https://www.facebook.com/horchatajs/"
+            <ExternalLink
+              eventLabel="Icono Facebook"
+              to="https://www.facebook.com/horchatajs/"
               className="navbar-item"
               target="_blank"
               rel="noopener"
@@ -57,9 +59,10 @@ class Navbar extends Component {
               <figure className="image is-16x16">
                 <img src={facebook} />
               </figure>
-            </a>
-            <a
-              href="https://twitter.com/HorchataJS"
+            </ExternalLink>
+            <ExternalLink
+              eventLabel="Icono Twitter"
+              to="https://twitter.com/HorchataJS"
               className="navbar-item"
               target="_blank"
               rel="noopener"
@@ -67,9 +70,10 @@ class Navbar extends Component {
               <figure className="image is-16x16">
                 <img src={twitter} />
               </figure>
-            </a>
-            <a
-              href="https://www.instagram.com/horchatajs/"
+            </ExternalLink>
+            <ExternalLink
+              eventLabel="Icono Instagram"
+              to="https://www.instagram.com/horchatajs/"
               className="navbar-item"
               target="_blank"
               rel="noopener"
@@ -77,9 +81,10 @@ class Navbar extends Component {
               <figure className="image is-16x16">
                 <img src={instagram} />
               </figure>
-            </a>
-            <a
-              href="https://github.com/horchatajs"
+            </ExternalLink>
+            <ExternalLink
+              eventLabel="Icono Github"
+              to="https://github.com/horchatajs"
               className="navbar-item"
               target="_blank"
               rel="noopener"
@@ -87,7 +92,7 @@ class Navbar extends Component {
               <figure className="image is-16x16">
                 <img src={github} />
               </figure>
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </nav>
