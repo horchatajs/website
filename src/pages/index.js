@@ -5,6 +5,8 @@ import { OutboundLink as ExternalLink } from 'react-ga';
 import slack from '../img/slack.svg';
 import Avatar from '../components/Avatar';
 
+const getMembersCount = list => list[0].node.profileCount;
+
 const avatarList = (list = [], size = 'is-48x48') => {
   const transformList = list.map(item => item.node.profile);
   return transformList.map(avatar => (
@@ -17,7 +19,9 @@ const avatarList = (list = [], size = 'is-48x48') => {
 const IndexPage = props => {
   const site = props.data.site.siteMetadata;
   const members = props.data.allMemberUser.edges;
+  const membersCount = getMembersCount(props.data.allMemberUser.edges);
   const membersAvatar = avatarList(members);
+
   return (
     <div>
       <Helmet>
@@ -34,7 +38,12 @@ const IndexPage = props => {
           target="_blank"
           rel="noopener"
         >
-          <span>Registrate</span>
+          <span>
+            Registrate{' '}
+            <span className="tag is-vertical-align-middle">
+              {membersCount} miembros
+            </span>
+          </span>
         </ExternalLink>
       </section>
       <section className="section is-rounded has-background-white has-shadow">
@@ -165,6 +174,7 @@ export const query = graphql`
     allMemberUser {
       edges {
         node {
+          profileCount
           profile {
             id
             name
