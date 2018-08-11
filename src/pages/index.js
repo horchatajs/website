@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { OutboundLink as ExternalLink } from 'react-ga';
 
 import slack from '../img/slack.svg';
 import Avatar from '../components/Avatar';
@@ -26,14 +27,15 @@ const IndexPage = props => {
         <h1 className="title is-1 has-text-black has-text-weight-bold">
           Comunidad de JavaScript <br /> en El Salvador
         </h1>
-        <a
-          href="https://www.meetup.com/es-ES/horchatajs/"
+        <ExternalLink
+          eventLabel="Link registro"
+          to="https://www.meetup.com/es-ES/horchatajs/"
           className="button is-primary is-large has-text-black"
           target="_blank"
           rel="noopener"
         >
           <span>Registrate</span>
-        </a>
+        </ExternalLink>
       </section>
       <section className="section is-rounded has-background-white has-shadow">
         <div className="content">
@@ -48,10 +50,15 @@ const IndexPage = props => {
               </p>
               <p>
                 Se espera que todos los miembros sigan el{' '}
-                <a href="https://github.com/devs-sv/codigo-de-conducta">
+                <ExternalLink
+                  eventLabel="Link código de conducta"
+                  to="https://github.com/devs-sv/codigo-de-conducta"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {' '}
                   código de conducta de la comunidad
-                </a>.
+                </ExternalLink>.
               </p>
             </div>
             <div className="column is-half">{membersAvatar}</div>
@@ -71,14 +78,15 @@ const IndexPage = props => {
                 bienvenida. Y no, no necesitas ser alguien experto para dar una
                 charla.
               </p>
-              <a
-                href="https://github.com/horchatajs/charlas"
+              <ExternalLink
+                eventLabel="Link charla"
+                to="https://github.com/horchatajs/charlas"
                 className="button is-black is-outlined"
                 target="_blank"
                 rel="noopener"
               >
-                <span>Información de pláticas</span>
-              </a>
+                <span>Información de charlas</span>
+              </ExternalLink>
             </div>
             <div className="column is-half">
               <h3 className="is-size-5 has-text-black">
@@ -86,8 +94,19 @@ const IndexPage = props => {
               </h3>
               <p>
                 Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
-                <a href="http://slack.horchatajs.com/">Slack</a> o participá en{' '}
-                <a href="https://github.com/horchatajs">GitHub</a>.
+                <ExternalLink
+                  eventLabel="Link Slack texto"
+                  to="http://slack.horchatajs.com/"
+                >
+                  Slack
+                </ExternalLink>{' '}
+                o participá en{' '}
+                <ExternalLink
+                  eventLabel="Link Github texto"
+                  to="https://github.com/horchatajs"
+                >
+                  GitHub
+                </ExternalLink>.
               </p>
             </div>
           </div>
@@ -102,21 +121,23 @@ const IndexPage = props => {
               <p>
                 ¿Te interesa patrocinar un evento de la comunidad? ¡Escribínos!
               </p>
-              <a
-                href="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
+              <ExternalLink
+                eventLabel="Link patrocinio"
+                to="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
                 className="button is-black is-outlined"
                 target="_blank"
                 rel="noopener"
               >
                 <span>Contacto sobre patrocinios</span>
-              </a>
+              </ExternalLink>
             </div>
           </div>
         </div>
       </section>
       <section className="section has-text-centered">
-        <a
-          href="http://slack.horchatajs.com/"
+        <ExternalLink
+          eventLabel="Link Slack botón"
+          to="http://slack.horchatajs.com/"
           className="button is-primary is-outlined is-medium has-text-black"
           target="_blank"
           rel="noopener"
@@ -125,7 +146,7 @@ const IndexPage = props => {
             <img src={slack} />
           </figure>
           <span>slack.horchatajs.com</span>
-        </a>
+        </ExternalLink>
       </section>
     </div>
   );
