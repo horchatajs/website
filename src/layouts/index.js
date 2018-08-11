@@ -37,6 +37,7 @@ const TemplateWrapper = ({
         name="twitter:image"
         content={`${meta.siteUrl}/img/share-logo.png"`}
       />
+      <body className="has-background-white-ter" />
     </Helmet>
     <Navbar />
     {children()}
