@@ -37,6 +37,7 @@ module.exports = async ({ boundActionCreators }) => {
         type: `MemberUser`,
       },
       children: [],
+      profileCount: response.data.meta.total_count,
       profile: {
         id: user.member_id,
         name: user.name,
