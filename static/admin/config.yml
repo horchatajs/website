@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: horchatajs/website
   branch: master
 
 media_folder: static/img
@@ -18,14 +19,3 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/participa/index.md"
-        label: "Participa"
-        name: "participa"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "static-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}

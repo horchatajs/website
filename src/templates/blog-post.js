@@ -18,6 +18,7 @@ export const BlogPostTemplate = ({
     <div className="container is-content">
       <Helmet>
         <title>{title} – HorchataJS</title>
+        <body className="has-background-white" />
       </Helmet>
       <section className="section">
         <div className="content">
