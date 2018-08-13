@@ -8,7 +8,7 @@ El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo
 
 - Tener instalado [Node](https://nodejs.org/es/) v8.0.0+ y [Yarn](https://yarnpkg.com/es-ES/) v1.2.0+.
 - Instalar la [herramienta de línea de comandos de Gatsby](https://www.gatsbyjs.org/docs/).
-- Tener a la mano tu API Key de Meetup (podés conseguirlo [aquí](https://secure.meetup.com/meetup_api/key/), **recordá no compartirlo**).
+- (Opcional) Tener a la mano tu API Key de Meetup (podés conseguirlo [aquí](https://secure.meetup.com/meetup_api/key/), **recordá no compartirlo**).
 
 ## Instalación
 
@@ -20,7 +20,7 @@ yarn
 
 ## Desarrollo
 
-> Antes de iniciar, tenés que copiar el archivo `.env.example`, renombrarlo a `.env` y colocar tu API Key de Meetup (ver prerrequisitos).
+> (Opcional) Antes de iniciar, tenés que copiar el archivo `.env.example`, renombrarlo a `.env` y colocar tu API Key de Meetup (ver prerrequisitos).
 
 Para iniciar el entorno de desarrollo tenés que ejecutar el siguiente comando:
 
