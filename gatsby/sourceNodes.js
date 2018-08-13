@@ -1,5 +1,6 @@
 const axios = require('axios');
 const crypto = require('crypto');
+const mockedResponseProfiles = require('./mocks/profiles');
 
 /**
  * Create all avatar member nodes
@@ -26,7 +27,20 @@ module.exports = async ({ boundActionCreators }) => {
   // Fetch members information
   const fetchMembers = () =>
     axios.get(meetupProfilesEndpoint, meetupProfilesConfig);
-  const response = await fetchMembers();
+  let response = {};
+
+  try {
+    response = await fetchMembers();
+  } catch (e) {
+    console.log(
+      '\nThere was an error with the Meetup members profiles request.',
+      e.response.data,
+    );
+  }
+
+  if (response.status !== 200) {
+    response = mockedResponseProfiles;
+  }
 
   response.data.results.map(user => {
     // Setup user node
