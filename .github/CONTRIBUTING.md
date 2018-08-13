@@ -24,6 +24,14 @@ Si la nueva característica es algo que creás poder implementar, cloná el proy
 
 Por favor consultá primero antes de escribir el código para una nueva caracteristíca o para cambiar parte de lo ya existente (por ejemplo, agregar paquetes, implementación de funciones, refactorización, etc), de lo contrario es posible que perdás mucho tiempo trabajando en algo que no vaya con la visión del proyecto.
 
+## git-flow
+
+> TODO: Agregar lineamientos para el uso de git-flow dentro del proyecto.
+
+## Guía de estilo
+
+> TODO: Agregar documentación sobre estándares de código del proyecto.
+
 # Comunidad
 
 El equipo a cargo del proyecto es [@ricardoerl](https://twitter.com/ricardoerl) y [@cesaramirezsv](https://twitter.com/cesaramirezsv). Si tenés alguna duda o queja no dudés en escribírnos en Twitter o en [Slack](http://slack.horchatajs.com/).

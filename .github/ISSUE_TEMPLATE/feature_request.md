@@ -4,14 +4,8 @@ about: Sugerir una idea o cambio para el proyecto
 
 ---
 
-**¿La sugerencia está relacionada con un problemas? Por favor describilo.**
-Una descripción clara y concisa de cuál es el problema relacionado. Ej. Siempre tengo inconvenientes con [...]
-
-**Descrí la solución que te gustaría ver**
-Una descripción clara y concisa de lo que querés que suceda.
-
-**Descrí las alternativas que has considerado**
-Una descripción clara y concisa de referencias o soluciones alternativas que hayas considerado.
+**Descripción de la idea/sugerencia**
+Una descripción de tu idea o sugerencia. Si es posible, agradecemos agregués una breve explicación de el porqué se debe implementar tu idea y la forma en que sugerís hacerlo.
 
 **Información adicional**
 Cualquier información adicional or capturas de pantallas que ayuden a entender tu sugerencia o cambio.
