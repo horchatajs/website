@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 export default class BlogPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    const site = data.site.siteMetadata;
 
     return (
       <div className="container is-content">
+        <Helmet>
+          <title>{`${site.title} – Blog`}</title>
+        </Helmet>
         {posts.map(({ node: post }) => (
           <Link className="post is-block" to={post.fields.slug} key={post.id}>
             <section className="section is-rounded has-background-white has-shadow has-shadow-hovered">
@@ -38,7 +43,13 @@ BlogPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query BlogQueryAndIndex {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }

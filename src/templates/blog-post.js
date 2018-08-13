@@ -11,13 +11,15 @@ export const BlogPostTemplate = ({
   tags,
   title,
   date,
-  helmet,
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
     <div className="container is-content">
-      {helmet || ''}
+      <Helmet>
+        <title>{title} – HorchataJS</title>
+        <body className="has-background-white" />
+      </Helmet>
       <section className="section">
         <div className="content">
           <h1 className="is-size-3 has-text-black has-text-weight-bold">
@@ -61,7 +63,6 @@ const BlogPost = ({ data }) => {
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
       date={post.frontmatter.date}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}

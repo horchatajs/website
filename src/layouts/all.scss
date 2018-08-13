@@ -25,6 +25,9 @@ $link: $black;
 .is-justify-center {
   justify-content: center;
 }
+.is-vertical-align-middle {
+  vertical-align: middle;
+}
 .is-content {
   max-width: 48rem;
 }
@@ -35,11 +38,13 @@ $link: $black;
 .has-shadow-hovered:hover {
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
+.has-background-yellow-light {
+  background-color: $yellow-light;
+}
 
 // Styles
 body {
   min-height: 100vh;
-  background: $yellow-light;
   border-top: 4px solid $primary;
   padding-left: 1rem;
   padding-right: 1rem;

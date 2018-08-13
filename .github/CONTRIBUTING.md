@@ -20,9 +20,17 @@ Si el error es algo que creás poder solucionar, cloná el proyecto y creá una 
 
 Todas las sugerencias para mejorar el sitio de la comunidad son bienvenidas. Para proponer una nueva característica abrí un reporte en nuestra [listado de reportes](https://github.com/horchatajs/website/issues) con la etiqueta `enhancement` que describa la función que te gustaría ver, por qué la necesitás y cómo debería funcionar.
 
-Si la nueva característica es algo que creás poder implementar, cloná el proyecto y creá una rama a partir de `master` y enviános un _Pull Request_.
+Si la nueva característica es algo que creás poder implementar, cloná el proyecto y creá una rama a partir de `master` y enviános un [Pull Request](https://github.com/horchatajs/website/pulls), en la creación del mismo tienes un template para obtener un guia clara de como llevarlo a cabo.
 
 Por favor consultá primero antes de escribir el código para una nueva caracteristíca o para cambiar parte de lo ya existente (por ejemplo, agregar paquetes, implementación de funciones, refactorización, etc), de lo contrario es posible que perdás mucho tiempo trabajando en algo que no vaya con la visión del proyecto.
+
+## git-flow
+
+> TODO: Agregar lineamientos para el uso de git-flow dentro del proyecto.
+
+## Guía de estilo
+
+> TODO: Agregar documentación sobre estándares de código del proyecto.
 
 # Comunidad
 
