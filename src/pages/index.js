@@ -55,7 +55,7 @@ const IndexPage = props => {
               </h2>
               <p>
                 HorchataJS es un espacio gratuito y abierto para aprender y
-                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+                compartir sobre JavaScript. Acercate y aprendé con nosotros.
               </p>
               <p>
                 Se espera que todos los miembros sigan el{' '}
@@ -84,7 +84,7 @@ const IndexPage = props => {
               <p>
                 Tu charla puede ser acerca de Javascript o temas relacionados a
                 su uso; cualquier experiencia, proyecto o historia es
-                bienvenida. Y no, no necesitas ser alguien experto para dar una
+                bienvenida. Y no, no necesitás ser alguien experto para dar una
                 charla.
               </p>
               <ExternalLink
