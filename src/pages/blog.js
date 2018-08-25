@@ -10,7 +10,7 @@ export default class BlogPage extends React.Component {
     const site = data.site.siteMetadata;
 
     return (
-      <div className="container is-content">
+      <div className="container is-content" onClick={()=> window.forceMenuToClose()}>
         <Helmet>
           <title>{`${site.title} – Blog`}</title>
         </Helmet>

@@ -17,6 +17,19 @@ class Navbar extends Component {
     this.setState({ isOpen: !isOpen });
   };
 
+  componentDidMount(){
+    document.querySelectorAll(".navbar-item").forEach(element=> {
+      element.addEventListener("click",()=> {
+        this.forceMenuToClose();
+      });
+    });
+    window.forceMenuToClose = this.forceMenuToClose.bind(this)
+  };
+
+  forceMenuToClose = ()=>{
+    this.setState({isOpen: false});
+  };
+
   render() {
     const { isOpen } = this.state;
     return (
@@ -26,7 +39,8 @@ class Navbar extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item">
+          <Link to="/" 
+            className="navbar-item">
             <img src={logo} alt="HorchataJS" />
           </Link>
 
@@ -44,12 +58,13 @@ class Navbar extends Component {
         </div>
         <div className={`navbar-menu ${isOpen && 'is-active'}`}>
           <div className="navbar-start">
-            <Link to="/blog" className="navbar-item">
+            <Link to="/blog" 
+              className="navbar-item">
               Blog
             </Link>
           </div>
           <div className="navbar-end is-flex-touch is-justify-center">
-            <ExternalLink
+            <ExternalLink 
               eventLabel="Icono Facebook"
               to="https://www.facebook.com/horchatajs/"
               className="navbar-item"
