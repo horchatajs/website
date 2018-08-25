@@ -15,7 +15,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <div className="container is-content">
+    <div className="container is-content" onClick={window.forceMenuToClose ? ()=> window.forceMenuToClose() : null}>
       <Helmet>
         <title>{title} – HorchataJS</title>
         <body className="has-background-white" />

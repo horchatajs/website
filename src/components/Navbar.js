@@ -17,7 +17,18 @@ class Navbar extends Component {
     this.setState({ isOpen: !isOpen });
   };
 
-  forceMenuToClose = _=> this.setState({isOpen: false});
+  componentDidMount(){
+    document.querySelectorAll(".navbar-item").forEach(element=> {
+      element.addEventListener("click",()=> {
+        this.forceMenuToClose();
+      });
+    });
+    window.forceMenuToClose = this.forceMenuToClose.bind(this)
+  };
+
+  forceMenuToClose = ()=>{
+    this.setState({isOpen: false});
+  };
 
   render() {
     const { isOpen } = this.state;
@@ -28,7 +39,8 @@ class Navbar extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <Link to="/" onClick={this.forceMenuToClose} className="navbar-item">
+          <Link to="/" 
+            className="navbar-item">
             <img src={logo} alt="HorchataJS" />
           </Link>
 
@@ -47,14 +59,12 @@ class Navbar extends Component {
         <div className={`navbar-menu ${isOpen && 'is-active'}`}>
           <div className="navbar-start">
             <Link to="/blog" 
-              onClick={this.forceMenuToClose} 
               className="navbar-item">
               Blog
             </Link>
           </div>
           <div className="navbar-end is-flex-touch is-justify-center">
             <ExternalLink 
-              onClick={this.forceMenuToClose}
               eventLabel="Icono Facebook"
               to="https://www.facebook.com/horchatajs/"
               className="navbar-item"
@@ -66,7 +76,6 @@ class Navbar extends Component {
               </figure>
             </ExternalLink>
             <ExternalLink
-              onClick={this.forceMenuToClose}
               eventLabel="Icono Twitter"
               to="https://twitter.com/HorchataJS"
               className="navbar-item"
@@ -78,7 +87,6 @@ class Navbar extends Component {
               </figure>
             </ExternalLink>
             <ExternalLink
-              onClick={this.forceMenuToClose}
               eventLabel="Icono Instagram"
               to="https://www.instagram.com/horchatajs/"
               className="navbar-item"
@@ -90,7 +98,6 @@ class Navbar extends Component {
               </figure>
             </ExternalLink>
             <ExternalLink
-              onClick={this.forceMenuToClose}
               eventLabel="Icono Github"
               to="https://github.com/horchatajs"
               className="navbar-item"
