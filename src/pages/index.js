@@ -23,7 +23,7 @@ const IndexPage = props => {
   const membersAvatar = avatarList(members);
 
   return (
-    <div>
+    <div onClick={()=>window.forceMenuToClose()}>
       <Helmet>
         <title>{`${site.title} – ${site.description}`}</title>
       </Helmet>
