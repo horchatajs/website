@@ -17,6 +17,12 @@ class Navbar extends Component {
     this.setState({ isOpen: !isOpen });
   };
 
+  hideMenu = () => {
+    this.setState({isOpen: false});
+  }
+
+  Link = (props) => <Link {...props} onClick={this.hideMenu}/> 
+
   render() {
     const { isOpen } = this.state;
     return (
@@ -44,9 +50,9 @@ class Navbar extends Component {
         </div>
         <div className={`navbar-menu ${isOpen && 'is-active'}`}>
           <div className="navbar-start">
-            <Link to="/blog" className="navbar-item">
+            <this.Link to="/blog" className="navbar-item">
               Blog
-            </Link>
+            </this.Link>
           </div>
           <div className="navbar-end is-flex-touch is-justify-center">
             <ExternalLink
