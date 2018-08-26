@@ -12,6 +12,19 @@ class Navbar extends Component {
     isOpen: false,
   };
 
+  componentDidMount(){
+    document.querySelectorAll(".navbar-item").forEach(element=> {
+      element.addEventListener("click",()=> {
+        this.forceMenuToClose();
+      });
+    });
+    window.forceMenuToClose = this.forceMenuToClose.bind(this)
+  };
+
+  forceMenuToClose = () =>{
+    this.setState({isOpen: false});
+  };
+
   handleMenuToggle = () => {
     const { isOpen } = this.state;
     this.setState({ isOpen: !isOpen });

@@ -20,7 +20,7 @@ class TagRoute extends React.Component {
     } con la etiqueta “${tag}”`;
 
     return (
-      <div className="container is-content">
+      <div className="container is-content" onClick={()=> window.forceMenuToClose()}>
         <Helmet title={`${tag} | ${title}`} />
         <section className="section">
           <div className="content">
