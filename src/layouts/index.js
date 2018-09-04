@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-import Navbar from "../components/Navbar";
-import "./all.scss";
+import Navbar from '../components/Navbar';
+import './all.scss';
 
 class TemplateWrapper extends React.Component {
   componentDidMount() {
@@ -58,7 +58,7 @@ class TemplateWrapper extends React.Component {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default TemplateWrapper;

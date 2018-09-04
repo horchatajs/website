@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import { OutboundLink as ExternalLink } from "react-ga";
-import logo from "../img/horchatajs-logo.svg";
-import facebook from "../img/facebook.svg";
-import twitter from "../img/twitter.svg";
-import github from "../img/github.svg";
-import instagram from "../img/instagram.svg";
+import React, { Component } from 'react';
+import Link from 'gatsby-link';
+import { OutboundLink as ExternalLink } from 'react-ga';
+import logo from '../img/horchatajs-logo.svg';
+import facebook from '../img/facebook.svg';
+import twitter from '../img/twitter.svg';
+import github from '../img/github.svg';
+import instagram from '../img/instagram.svg';
 
 class Navbar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   componentDidMount() {
@@ -53,7 +53,7 @@ class Navbar extends Component {
             <span aria-hidden="true" />
           </a>
         </div>
-        <div className={`navbar-menu ${isOpen && "is-active"}`}>
+        <div className={`navbar-menu ${isOpen && 'is-active'}`}>
           <div className="navbar-start">
             <Link to="/blog" className="navbar-item">
               Blog
