@@ -139,8 +139,7 @@ Esta guía de estilo para Git tiene como objetivo mantener un orden y coherencia
 
 1.  [Try github](https://try.github.io/levels/1/challenges/1)
 2.  [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/setting-up-a-repository/)
-3.  [Git cheat sheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
-4.  [Github help: user collaborating](https://help.github.com/categories/collaborating/)
+3.  [Github help: user collaborating](https://help.github.com/categories/collaborating/)
 
 # Licencia
 
