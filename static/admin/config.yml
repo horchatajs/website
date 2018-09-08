@@ -1,3 +1,4 @@
+# prettier-ignore
 backend:
   name: github
   repo: horchatajs/website
