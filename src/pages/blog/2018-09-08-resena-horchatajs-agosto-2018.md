@@ -12,11 +12,12 @@ tags:
   - strapi
   - '2018'
 ---
+
 El pasado sábado tuvimos el evento correspondiente a agosto de nuestra comunidad, ocasión donde nuevamente nos reunimos para tomar horchata y compartir sobre JavaScript.
 
 La tarde la comenzamos con la respectiva bienvenida y agradecimiento a los asistentes, compartimos un poco sobre la comunidad para quienes nos acompañaban por primera vez y recalcamos la importancia de nuestro código de conducta para todos nuestros eventos.
 
-En este evento tuvimos el apoyo de [The Nest](https://thenestsv.com/), quienes nos brindaron el espacio para realizar el evento. [Applaudo Studios](https://applaudostudios.com/) quienes nos ayudaron con los postres y stickers. Y por supuesto, [Abuela Chepa](https://www.facebook.com/abuelachepa/) que nos apoyó nuevamente con la bebida oficial de la comunidad. 
+En este evento tuvimos el apoyo de [The Nest](https://thenestsv.com/), quienes nos brindaron el espacio para realizar el evento. [Applaudo Studios](https://applaudostudios.com/) quienes nos ayudaron con los postres y stickers. Y por supuesto, [Abuela Chepa](https://www.facebook.com/abuelachepa/) que nos apoyó nuevamente con la bebida oficial de la comunidad.
 
 ![Asistentes prestando atención durante una charla](/img/dsc_0030.jpg)
 
@@ -32,7 +33,7 @@ La primera charla "Fundamentos de algoritmos con JS" estuvo a cargo de René qui
 
 ## Resolucion Club: la mejor forma de aprender es haciendo
 
-Después, Alexander nos compartió su experiencia con Node.js y sobre como aplicó todo lo aprendido en su proyecto "Resolucion Club".  
+Después, Alexander nos compartió su experiencia con Node.js y sobre como aplicó todo lo aprendido en su proyecto "Resolucion Club".
 
 > Podés visitar el proyecto [aquí](http://resolucion.club/).
 
