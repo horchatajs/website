@@ -17,43 +17,46 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
-    let children = this.props.children || false;
-    let meta = this.props.data.site.siteMetadata || false;
-    if (children && meta) {
+    const { children, data } = this.props;
+    const { site: { siteMetadata: meta }} = data;
+  
       return (
         <div className="container">
-          <Helmet>
-            <meta charSet="utf-8" />
-            {/* Facebook Open Graph */}
-            <meta property="og:url" content={meta.siteUrl} />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content={meta.title} />
-            <meta
-              property="og:image"
-              content={`${meta.siteUrl}/img/share-logo.png"`}
-            />
-            <meta property="og:image:width" content="200" />
-            <meta property="og:image:height" content="200" />
-            <meta property="og:description" content={meta.description} />
-            <meta property="og:site_name" content={meta.title} />
+          {
+            meta && 
+              <Helmet>
+                <meta charSet="utf-8" />
+                {/* Facebook Open Graph */}
+                <meta property="og:url" content={meta.siteUrl} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={meta.title} />
+                <meta
+                  property="og:image"
+                  content={`${meta.siteUrl}/img/share-logo.png"`}
+                />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
+                <meta property="og:description" content={meta.description} />
+                <meta property="og:site_name" content={meta.title} />
 
-            {/* Twitter Card */}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content={meta.siteUrl} />
-            <meta name="twitter:url" content={meta.siteUrl} />
-            <meta name="twitter:title" content={meta.title} />
-            <meta name="twitter:description" content={meta.description} />
-            <meta
-              name="twitter:image"
-              content={`${meta.siteUrl}/img/share-logo.png"`}
-            />
-            <body className="has-background-white-ter" />
-          </Helmet>
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content={meta.siteUrl} />
+                <meta name="twitter:url" content={meta.siteUrl} />
+                <meta name="twitter:title" content={meta.title} />
+                <meta name="twitter:description" content={meta.description} />
+                <meta
+                  name="twitter:image"
+                  content={`${meta.siteUrl}/img/share-logo.png"`}
+                />
+                <body className="has-background-white-ter" />
+              </Helmet>
+            }
           <Navbar />
           <div ref={el=>this.mainWrapper = el}>{children()}</div>
         </div>
       );
-    }
+    
   }
 }
 
