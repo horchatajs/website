@@ -12,9 +12,20 @@ class Navbar extends Component {
     isOpen: false,
   };
 
+  componentDidMount() {
+    window.forceNavToClose = this.forceMeToClose.bind(this);
+    this.navEnd.onclick = ()=>{
+      this.forceMeToClose();
+    }
+  }
+
   handleMenuToggle = () => {
     const { isOpen } = this.state;
     this.setState({ isOpen: !isOpen });
+  };
+
+  forceMeToClose = () => {
+    this.setState({ isOpen: false });
   };
 
   render() {
@@ -48,7 +59,7 @@ class Navbar extends Component {
               Blog
             </Link>
           </div>
-          <div className="navbar-end is-flex-touch is-justify-center">
+          <div className="navbar-end is-flex-touch is-justify-center" ref={el=>this.navEnd = el}>
             <ExternalLink
               eventLabel="Icono Facebook"
               to="https://www.facebook.com/horchatajs/"
