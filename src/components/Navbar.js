@@ -33,7 +33,6 @@ class Navbar extends Component {
     return (
       <nav
         className="navbar is-vertical-spaced is-transparent"
-        role="navigation"
         aria-label="main navigation"
       >
         <div className="navbar-brand">
@@ -65,10 +64,10 @@ class Navbar extends Component {
               to="https://www.facebook.com/horchatajs/"
               className="navbar-item"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <figure className="image is-16x16">
-                <img src={facebook} />
+                <img src={facebook} alt='Facebook'/>
               </figure>
             </ExternalLink>
             <ExternalLink
@@ -76,10 +75,10 @@ class Navbar extends Component {
               to="https://twitter.com/HorchataJS"
               className="navbar-item"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <figure className="image is-16x16">
-                <img src={twitter} />
+                <img src={twitter} alt='Twitter'/>
               </figure>
             </ExternalLink>
             <ExternalLink
@@ -87,10 +86,10 @@ class Navbar extends Component {
               to="https://www.instagram.com/horchatajs/"
               className="navbar-item"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <figure className="image is-16x16">
-                <img src={instagram} />
+                <img src={instagram} alt='Instagram'/>
               </figure>
             </ExternalLink>
             <ExternalLink
@@ -98,10 +97,10 @@ class Navbar extends Component {
               to="https://github.com/horchatajs"
               className="navbar-item"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <figure className="image is-16x16">
-                <img src={github} />
+                <img src={github} alt='Github'/>
               </figure>
             </ExternalLink>
           </div>

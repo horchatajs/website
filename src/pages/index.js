@@ -26,6 +26,7 @@ const IndexPage = props => {
     <div>
       <Helmet>
         <title>{`${site.title} – ${site.description}`}</title>
+        <html lang="es" />
       </Helmet>
       <section className="section has-text-centered">
         <h1 className="title is-1 has-text-black has-text-weight-bold">
@@ -36,7 +37,7 @@ const IndexPage = props => {
           to="https://www.meetup.com/es-ES/horchatajs/"
           className="button is-primary is-large has-text-black"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <span>
             Registrate{' '}
@@ -63,7 +64,7 @@ const IndexPage = props => {
                   eventLabel="Link código de conducta"
                   to="https://github.com/devs-sv/codigo-de-conducta"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   {' '}
                   código de conducta de la comunidad
@@ -92,7 +93,7 @@ const IndexPage = props => {
                 to="https://github.com/horchatajs/charlas"
                 className="button is-black is-outlined"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span>Información de charlas</span>
               </ExternalLink>
@@ -106,6 +107,7 @@ const IndexPage = props => {
                 <ExternalLink
                   eventLabel="Link Slack texto"
                   to="http://slack.horchatajs.com/"
+                  rel='noopener noreferrer'
                 >
                   Slack
                 </ExternalLink>{' '}
@@ -132,10 +134,10 @@ const IndexPage = props => {
               </p>
               <ExternalLink
                 eventLabel="Link patrocinio"
-                to="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
+                to="mailto:horchatajs@gmail.com?subject=Quiero%20patrocinar%20un%20evento%20de%20HorchataJS"
                 className="button is-black is-outlined"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span>Contacto sobre patrocinios</span>
               </ExternalLink>
@@ -143,20 +145,20 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      <section className="section has-text-centered">
+      <div className="section has-text-centered">
         <ExternalLink
           eventLabel="Link Slack botón"
           to="http://slack.horchatajs.com/"
           className="button is-primary is-outlined is-medium has-text-black"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <figure className="image is-24x24" style={{ marginRight: 10 }}>
-            <img src={slack} />
+            <img src={slack} alt='Slack'/>
           </figure>
           <span>slack.horchatajs.com</span>
         </ExternalLink>
-      </section>
+      </div>
     </div>
   );
 };
