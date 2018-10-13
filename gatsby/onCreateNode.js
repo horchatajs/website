@@ -1,4 +1,4 @@
-const { createFilePath } = require('gatsby-source-filesystem');
+const { createFilePath } = require('gatsby-source-filesystem')
 
 /**
  * Create all blog post nodes
@@ -8,16 +8,16 @@ const { createFilePath } = require('gatsby-source-filesystem');
 module.exports = exports.onCreateNode = ({
   node,
   boundActionCreators,
-  getNode,
+  getNode
 }) => {
-  const { createNodeField } = boundActionCreators;
+  const { createNodeField } = boundActionCreators
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
-      value,
-    });
+      value
+    })
   }
-};
+}

@@ -1,57 +1,57 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { OutboundLink as ExternalLink } from 'react-ga';
+import React from 'react'
+import Helmet from 'react-helmet'
+import { OutboundLink as ExternalLink } from 'react-ga'
 
-import slack from '../img/slack.svg';
-import Avatar from '../components/Avatar';
+import slack from '../img/slack.svg'
+import Avatar from '../components/Avatar'
 
-const getMembersCount = list => list[0].node.profileCount;
+const getMembersCount = list => list[0].node.profileCount
 
 const avatarList = (list = [], size = 'is-48x48') => {
-  const transformList = list.map(item => item.node.profile);
+  const transformList = list.map(item => item.node.profile)
   return transformList.map(avatar => (
-    <div className="is-inline-block" key={avatar.id}>
+    <div className='is-inline-block' key={avatar.id}>
       <Avatar title={avatar.name} src={avatar.photo} size={size} />
     </div>
-  ));
-};
+  ))
+}
 
 const IndexPage = props => {
-  const site = props.data.site.siteMetadata;
-  const members = props.data.allMemberUser.edges;
-  const membersCount = getMembersCount(props.data.allMemberUser.edges);
-  const membersAvatar = avatarList(members);
+  const site = props.data.site.siteMetadata
+  const members = props.data.allMemberUser.edges
+  const membersCount = getMembersCount(props.data.allMemberUser.edges)
+  const membersAvatar = avatarList(members)
 
   return (
     <div>
       <Helmet>
         <title>{`${site.title} – ${site.description}`}</title>
-        <html lang="es" />
+        <html lang='es' />
       </Helmet>
-      <section className="section has-text-centered">
-        <h1 className="title is-1 has-text-black has-text-weight-bold">
+      <section className='section has-text-centered'>
+        <h1 className='title is-1 has-text-black has-text-weight-bold'>
           Comunidad de JavaScript <br /> en El Salvador
         </h1>
         <ExternalLink
-          eventLabel="Link registro"
-          to="https://www.meetup.com/es-ES/horchatajs/"
-          className="button is-primary is-large has-text-black"
-          target="_blank"
-          rel="noopener noreferrer"
+          eventLabel='Link registro'
+          to='https://www.meetup.com/es-ES/horchatajs/'
+          className='button is-primary is-large has-text-black'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <span>
             Registrate{' '}
-            <span className="tag is-vertical-align-middle">
+            <span className='tag is-vertical-align-middle'>
               {membersCount} miembros
             </span>
           </span>
         </ExternalLink>
       </section>
-      <section className="section is-rounded has-background-white has-shadow">
-        <div className="content">
-          <div className="columns">
-            <div className="column is-half">
-              <h2 className="subtitle has-text-black has-text-weight-semibold">
+      <section className='section is-rounded has-background-white has-shadow'>
+        <div className='content'>
+          <div className='columns'>
+            <div className='column is-half'>
+              <h2 className='subtitle has-text-black has-text-weight-semibold'>
                 Sobre nosotros
               </h2>
               <p>
@@ -61,27 +61,27 @@ const IndexPage = props => {
               <p>
                 Se espera que todos los miembros sigan el{' '}
                 <ExternalLink
-                  eventLabel="Link código de conducta"
-                  to="https://github.com/devs-sv/codigo-de-conducta"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  eventLabel='Link código de conducta'
+                  to='https://github.com/devs-sv/codigo-de-conducta'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   {' '}
                   código de conducta de la comunidad
                 </ExternalLink>.
               </p>
             </div>
-            <div className="column is-half">{membersAvatar}</div>
+            <div className='column is-half'>{membersAvatar}</div>
           </div>
         </div>
         <hr />
-        <div className="content">
-          <h2 className="subtitle has-text-black has-text-weight-semibold">
+        <div className='content'>
+          <h2 className='subtitle has-text-black has-text-weight-semibold'>
             Participá
           </h2>
-          <div className="columns">
-            <div className="column is-half">
-              <h3 className="is-size-5 has-text-black">Da una charla</h3>
+          <div className='columns'>
+            <div className='column is-half'>
+              <h3 className='is-size-5 has-text-black'>Da una charla</h3>
               <p>
                 Tu charla puede ser acerca de Javascript o temas relacionados a
                 su uso; cualquier experiencia, proyecto o historia es
@@ -89,32 +89,32 @@ const IndexPage = props => {
                 charla.
               </p>
               <ExternalLink
-                eventLabel="Link charla"
-                to="https://github.com/horchatajs/charlas"
-                className="button is-black is-outlined"
-                target="_blank"
-                rel="noopener noreferrer"
+                eventLabel='Link charla'
+                to='https://github.com/horchatajs/charlas'
+                className='button is-black is-outlined'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <span>Información de charlas</span>
               </ExternalLink>
             </div>
-            <div className="column is-half">
-              <h3 className="is-size-5 has-text-black">
+            <div className='column is-half'>
+              <h3 className='is-size-5 has-text-black'>
                 Ayudá en la organización
               </h3>
               <p>
                 Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
                 <ExternalLink
-                  eventLabel="Link Slack texto"
-                  to="http://slack.horchatajs.com/"
+                  eventLabel='Link Slack texto'
+                  to='http://slack.horchatajs.com/'
                   rel='noopener noreferrer'
                 >
                   Slack
                 </ExternalLink>{' '}
                 o participá en{' '}
                 <ExternalLink
-                  eventLabel="Link Github texto"
-                  to="https://github.com/horchatajs"
+                  eventLabel='Link Github texto'
+                  to='https://github.com/horchatajs'
                 >
                   GitHub
                 </ExternalLink>.
@@ -123,21 +123,21 @@ const IndexPage = props => {
           </div>
         </div>
         <hr />
-        <div className="content">
-          <div className="columns">
-            <div className="column is-half">
-              <h2 className="subtitle has-text-black has-text-weight-semibold">
+        <div className='content'>
+          <div className='columns'>
+            <div className='column is-half'>
+              <h2 className='subtitle has-text-black has-text-weight-semibold'>
                 Patrocinio
               </h2>
               <p>
                 ¿Te interesa patrocinar un evento de la comunidad? ¡Escribínos!
               </p>
               <ExternalLink
-                eventLabel="Link patrocinio"
-                to="mailto:horchatajs@gmail.com?subject=Quiero%20patrocinar%20un%20evento%20de%20HorchataJS"
-                className="button is-black is-outlined"
-                target="_blank"
-                rel="noopener noreferrer"
+                eventLabel='Link patrocinio'
+                to='mailto:horchatajs@gmail.com?subject=Quiero%20patrocinar%20un%20evento%20de%20HorchataJS'
+                className='button is-black is-outlined'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <span>Contacto sobre patrocinios</span>
               </ExternalLink>
@@ -145,25 +145,25 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      <div className="section has-text-centered">
+      <div className='section has-text-centered'>
         <ExternalLink
-          eventLabel="Link Slack botón"
-          to="http://slack.horchatajs.com/"
-          className="button is-primary is-outlined is-medium has-text-black"
-          target="_blank"
-          rel="noopener noreferrer"
+          eventLabel='Link Slack botón'
+          to='http://slack.horchatajs.com/'
+          className='button is-primary is-outlined is-medium has-text-black'
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          <figure className="image is-24x24" style={{ marginRight: 10 }}>
-            <img src={slack} alt='Slack'/>
+          <figure className='image is-24x24' style={{ marginRight: 10 }}>
+            <img src={slack} alt='Slack' />
           </figure>
           <span>slack.horchatajs.com</span>
         </ExternalLink>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   query MemberUserQueryAndIndex {
@@ -186,4 +186,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -5,34 +5,34 @@ module.exports = {
     siteUrl: `https://www.horchatajs.com`,
     baseUrl: `/`,
     twitterHandler: '@horchatajs',
-    facebookHandler: 'horchatajs',
+    facebookHandler: 'horchatajs'
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: 'pages'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images',
-      },
+        name: 'images'
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
-      },
+        plugins: []
+      }
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
     },
     {
       resolve: `gatsby-plugin-favicon`,
@@ -48,14 +48,14 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false,
-        },
-      },
+          windows: false
+        }
+      }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-netlify',
-  ],
-};
+    'gatsby-plugin-netlify'
+  ]
+}

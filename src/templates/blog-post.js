@@ -1,41 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-import Content, { HTMLContent } from '../components/Content';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   tags,
   title,
-  date,
+  date
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
-    <div className="container is-content">
+    <div className='container is-content'>
       <Helmet>
         <title>{title} – HorchataJS</title>
-        <body className="has-background-white" />
+        <body className='has-background-white' />
       </Helmet>
-      <section className="section">
-        <div className="content">
-          <h1 className="is-size-3 has-text-black has-text-weight-bold">
+      <section className='section'>
+        <div className='content'>
+          <h1 className='is-size-3 has-text-black has-text-weight-bold'>
             {title}
           </h1>
-          <p className="has-text-black">
+          <p className='has-text-black'>
             Publicado el <span>{date}</span>
           </p>
           <PostContent content={content} />
         </div>
-        <hr className="has-background-black" />
+        <hr className='has-background-black' />
         {tags && tags.length ? (
-          <div className="tags">
+          <div className='tags'>
             {tags.map(tag => (
               <Link
-                className="tag is-black"
+                className='tag is-black'
                 to={`/tags/${kebabCase(tag)}/`}
                 key={tag + `tag`}
               >
@@ -46,18 +46,18 @@ export const BlogPostTemplate = ({
         ) : null}
       </section>
     </div>
-  );
-};
+  )
+}
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet),
-};
+  helmet: PropTypes.instanceOf(Helmet)
+}
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <BlogPostTemplate
@@ -67,16 +67,16 @@ const BlogPost = ({ data }) => {
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-};
+    markdownRemark: PropTypes.object
+  })
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -90,4 +90,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
