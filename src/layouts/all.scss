@@ -59,3 +59,15 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+
+@media screen and (max-width: 800px) {
+  .title.is-1{
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title.is-1{
+    font-size: 1.5em;
+  }
+}
