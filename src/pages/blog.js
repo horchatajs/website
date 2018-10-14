@@ -23,7 +23,9 @@ export default class BlogPage extends React.Component {
                 </h2>
                 <p>{post.excerpt}</p>
                 <p className="has-text-grey-light">
-                  Publicado el <span>{post.frontmatter.date}</span>
+                  Publicado el
+                  {' '}
+                  <span>{post.frontmatter.date}</span>
                 </p>
               </div>
             </section>

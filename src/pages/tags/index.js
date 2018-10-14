@@ -28,7 +28,11 @@ const TagsPage = ({
               key={tag.fieldValue}
             >
               <span>
-                {tag.fieldValue} ({tag.totalCount})
+                {tag.fieldValue}
+                {' '}
+                (
+                {tag.totalCount}
+                )
               </span>
             </Link>
           ))}

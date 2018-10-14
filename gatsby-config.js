@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `HorchataJS`,
-    description: `HorchataJS es un espacio gratuito y abierto para aprender y compartir sobre JavaScript en El Salvador.`,
-    siteUrl: `https://www.horchatajs.com`,
-    baseUrl: `/`,
+    title: 'HorchataJS',
+    description: 'HorchataJS es un espacio gratuito y abierto para aprender y compartir sobre JavaScript en El Salvador.',
+    siteUrl: 'https://www.horchatajs.com',
+    baseUrl: '/',
     twitterHandler: '@horchatajs',
     facebookHandler: 'horchatajs',
   },
@@ -35,7 +35,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: 'gatsby-plugin-favicon',
       options: {
         logo: './src/img/favicon.png',
         injectHTML: true,

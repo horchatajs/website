@@ -1,0 +1,7 @@
+{
+    "extends": "airbnb",
+    "rules": {
+        "import/no-extraneous-dependencies": false,
+        "react/require-default-props": false
+    }
+}

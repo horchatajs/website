@@ -16,7 +16,7 @@ const avatarList = (list = [], size = 'is-48x48') => {
   ));
 };
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const site = props.data.site.siteMetadata;
   const members = props.data.allMemberUser.edges;
   const membersCount = getMembersCount(props.data.allMemberUser.edges);
@@ -26,22 +26,29 @@ const IndexPage = props => {
     <div>
       <Helmet>
         <title>{`${site.title} – ${site.description}`}</title>
+        <html lang="es" />
       </Helmet>
       <section className="section has-text-centered">
         <h1 className="title is-1 has-text-black has-text-weight-bold">
-          Comunidad de JavaScript <br /> en El Salvador
+          Comunidad de JavaScript
+          {' '}
+          <br />
+          en El Salvador
         </h1>
         <ExternalLink
           eventLabel="Link registro"
           to="https://www.meetup.com/es-ES/horchatajs/"
           className="button is-primary is-large has-text-black"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <span>
-            Registrate{' '}
+            Registrate
+            {' '}
             <span className="tag is-vertical-align-middle">
-              {membersCount} miembros
+              {membersCount}
+              {' '}
+              miembros
             </span>
           </span>
         </ExternalLink>
@@ -55,19 +62,21 @@ const IndexPage = props => {
               </h2>
               <p>
                 HorchataJS es un espacio gratuito y abierto para aprender y
-                compartir sobre JavaScript. Acercáte y aprendé con nosotros.
+                compartir sobre JavaScript. Acercate y aprendé con nosotros.
               </p>
               <p>
-                Se espera que todos los miembros sigan el{' '}
+                Se espera que todos los miembros sigan el
+                {' '}
                 <ExternalLink
                   eventLabel="Link código de conducta"
                   to="https://github.com/devs-sv/codigo-de-conducta"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   {' '}
                   código de conducta de la comunidad
-                </ExternalLink>.
+                </ExternalLink>
+                .
               </p>
             </div>
             <div className="column is-half">{membersAvatar}</div>
@@ -84,7 +93,7 @@ const IndexPage = props => {
               <p>
                 Tu charla puede ser acerca de Javascript o temas relacionados a
                 su uso; cualquier experiencia, proyecto o historia es
-                bienvenida. Y no, no necesitas ser alguien experto para dar una
+                bienvenida. Y no, no necesitás ser alguien experto para dar una
                 charla.
               </p>
               <ExternalLink
@@ -92,7 +101,7 @@ const IndexPage = props => {
                 to="https://github.com/horchatajs/charlas"
                 className="button is-black is-outlined"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span>Información de charlas</span>
               </ExternalLink>
@@ -102,20 +111,25 @@ const IndexPage = props => {
                 Ayudá en la organización
               </h3>
               <p>
-                Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
+                Tratamos de planear todo en comunidad. Chateá con nosotros en
+                {' '}
                 <ExternalLink
                   eventLabel="Link Slack texto"
                   to="http://slack.horchatajs.com/"
+                  rel="noopener noreferrer"
                 >
                   Slack
-                </ExternalLink>{' '}
-                o participá en{' '}
+                </ExternalLink>
+                {' '}
+                o participá en
+                {' '}
                 <ExternalLink
                   eventLabel="Link Github texto"
                   to="https://github.com/horchatajs"
                 >
                   GitHub
-                </ExternalLink>.
+                </ExternalLink>
+                .
               </p>
             </div>
           </div>
@@ -132,10 +146,10 @@ const IndexPage = props => {
               </p>
               <ExternalLink
                 eventLabel="Link patrocinio"
-                to="mailto:horchatajs@gmail.com?subject=Quiero patrocinar un evento de HorchataJS"
+                to="mailto:horchatajs@gmail.com?subject=Quiero%20patrocinar%20un%20evento%20de%20HorchataJS"
                 className="button is-black is-outlined"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span>Contacto sobre patrocinios</span>
               </ExternalLink>
@@ -143,20 +157,20 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      <section className="section has-text-centered">
+      <div className="section has-text-centered">
         <ExternalLink
           eventLabel="Link Slack botón"
           to="http://slack.horchatajs.com/"
           className="button is-primary is-outlined is-medium has-text-black"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <figure className="image is-24x24" style={{ marginRight: 10 }}>
-            <img src={slack} />
+            <img src={slack} alt="Slack" />
           </figure>
           <span>slack.horchatajs.com</span>
         </ExternalLink>
-      </section>
+      </div>
     </div>
   );
 };

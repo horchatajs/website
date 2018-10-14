@@ -17,7 +17,11 @@ export const BlogPostTemplate = ({
   return (
     <div className="container is-content">
       <Helmet>
-        <title>{title} – HorchataJS</title>
+        <title>
+          {title}
+          {' '}
+          – HorchataJS
+        </title>
         <body className="has-background-white" />
       </Helmet>
       <section className="section">
@@ -26,7 +30,9 @@ export const BlogPostTemplate = ({
             {title}
           </h1>
           <p className="has-text-black">
-            Publicado el <span>{date}</span>
+            Publicado el
+            {' '}
+            <span>{date}</span>
           </p>
           <PostContent content={content} />
         </div>
@@ -37,7 +43,7 @@ export const BlogPostTemplate = ({
               <Link
                 className="tag is-black"
                 to={`/tags/${kebabCase(tag)}/`}
-                key={tag + `tag`}
+                key={`${tag}tag`}
               >
                 <span>{tag}</span>
               </Link>
