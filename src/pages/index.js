@@ -16,7 +16,7 @@ const avatarList = (list = [], size = 'is-48x48') => {
   ));
 };
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const site = props.data.site.siteMetadata;
   const members = props.data.allMemberUser.edges;
   const membersCount = getMembersCount(props.data.allMemberUser.edges);
@@ -30,7 +30,10 @@ const IndexPage = props => {
       </Helmet>
       <section className="section has-text-centered">
         <h1 className="title is-1 has-text-black has-text-weight-bold">
-          Comunidad de JavaScript <br /> en El Salvador
+          Comunidad de JavaScript
+          {' '}
+          <br />
+          en El Salvador
         </h1>
         <ExternalLink
           eventLabel="Link registro"
@@ -40,9 +43,12 @@ const IndexPage = props => {
           rel="noopener noreferrer"
         >
           <span>
-            Registrate{' '}
+            Registrate
+            {' '}
             <span className="tag is-vertical-align-middle">
-              {membersCount} miembros
+              {membersCount}
+              {' '}
+              miembros
             </span>
           </span>
         </ExternalLink>
@@ -59,7 +65,8 @@ const IndexPage = props => {
                 compartir sobre JavaScript. Acercate y aprendé con nosotros.
               </p>
               <p>
-                Se espera que todos los miembros sigan el{' '}
+                Se espera que todos los miembros sigan el
+                {' '}
                 <ExternalLink
                   eventLabel="Link código de conducta"
                   to="https://github.com/devs-sv/codigo-de-conducta"
@@ -68,7 +75,8 @@ const IndexPage = props => {
                 >
                   {' '}
                   código de conducta de la comunidad
-                </ExternalLink>.
+                </ExternalLink>
+                .
               </p>
             </div>
             <div className="column is-half">{membersAvatar}</div>
@@ -103,21 +111,25 @@ const IndexPage = props => {
                 Ayudá en la organización
               </h3>
               <p>
-                Tratamos de planear todo en comunidad. Chateá con nosotros en{' '}
+                Tratamos de planear todo en comunidad. Chateá con nosotros en
+                {' '}
                 <ExternalLink
                   eventLabel="Link Slack texto"
                   to="http://slack.horchatajs.com/"
-                  rel='noopener noreferrer'
+                  rel="noopener noreferrer"
                 >
                   Slack
-                </ExternalLink>{' '}
-                o participá en{' '}
+                </ExternalLink>
+                {' '}
+                o participá en
+                {' '}
                 <ExternalLink
                   eventLabel="Link Github texto"
                   to="https://github.com/horchatajs"
                 >
                   GitHub
-                </ExternalLink>.
+                </ExternalLink>
+                .
               </p>
             </div>
           </div>
@@ -154,7 +166,7 @@ const IndexPage = props => {
           rel="noopener noreferrer"
         >
           <figure className="image is-24x24" style={{ marginRight: 10 }}>
-            <img src={slack} alt='Slack'/>
+            <img src={slack} alt="Slack" />
           </figure>
           <span>slack.horchatajs.com</span>
         </ExternalLink>
