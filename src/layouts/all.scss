@@ -59,3 +59,11 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+
+//////  BULMA MOBILE BREAKPOINT ///////
+@media all and (max-width:768px){
+  .content.has-custom-font-size-on-mobile{
+    font-size: 0.875rem
+  }
+}
+//////  BULMA MOBILE BREAKPOINT ///////
