@@ -1,8 +1,10 @@
+# prettier-ignore
 backend:
   name: github
   repo: horchatajs/website
   branch: master
 
+publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
