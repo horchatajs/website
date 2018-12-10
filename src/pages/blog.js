@@ -18,7 +18,7 @@ export default class BlogPage extends React.Component {
           <Link className="post is-block" to={post.fields.slug} key={post.id}>
             <section className="section is-rounded has-background-white has-shadow has-shadow-hovered">
               <div className="content">
-                <h2 className="is-size-4 has-text-black has-text-weight-bold">
+                <h2 className="is-size-4 is-size-5-mobile has-text-black has-text-weight-bold">
                   {post.frontmatter.title}
                 </h2>
                 <p>{post.excerpt}</p>

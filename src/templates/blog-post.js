@@ -4,7 +4,7 @@ import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import Content, { HTMLContent } from '../components/Content';
-
+const cheerio = require('cheerio')
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -13,7 +13,10 @@ export const BlogPostTemplate = ({
   date,
 }) => {
   const PostContent = contentComponent || Content;
-
+  const $ = cheerio.load(content);
+  $('h2').addClass('is-size-4-mobile');
+  $('h3').addClass('is-size-5-mobile');
+  $('h4').addClass('is-size-6-mobile');
   return (
     <div className="container is-content">
       <Helmet>
@@ -22,13 +25,13 @@ export const BlogPostTemplate = ({
       </Helmet>
       <section className="section">
         <div className="content">
-          <h1 className="is-size-3 has-text-black has-text-weight-bold">
+          <h1 className="is-size-3 is-size-4-mobile has-text-black has-text-weight-bold">
             {title}
           </h1>
           <p className="has-text-black">
             Publicado el <span>{date}</span>
           </p>
-          <PostContent content={content} />
+          <PostContent content={$.html()} />
         </div>
         <hr className="has-background-black" />
         {tags && tags.length ? (
