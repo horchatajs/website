@@ -59,3 +59,17 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+
+//Mobile Navbar
+@media screen and (max-width: 1087px) {
+  .navbar-burger,
+  .navbar-menu,
+  a.navbar-item:hover,
+  a.navbar-item.is-active {
+    background-color: $yellow;
+  }
+  .navbar-item {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}
