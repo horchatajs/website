@@ -8,6 +8,5 @@ tags:
   - comunidad
   - meta
 ---
-
-Bienvenido/a al blog de la comunidad HorchataJS. En este espacio queremos compartir artículos relacionados a JavaScript y a la comunidad de HorchataJS.
+Bienvenido/a al blog de la comunidad HorchataJS. En este espacio queremos compartir artículos relacionados a JavaScript y a la comunidad.
 Si tenés ganas de compartir algo no dudes en escribir a [nuestro correo electrónico](mailto:horchatajs@gmail.com) o sugerir tu idea en [nuestro repositorio en GitHub](https://github.com/horchatajs/website/issues).

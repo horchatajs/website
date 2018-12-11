@@ -12,10 +12,10 @@ module.exports = exports.onCreateNode = ({
 }) => {
   const { createNodeField } = boundActionCreators;
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode });
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value,
     });
