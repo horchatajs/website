@@ -5,7 +5,7 @@ const NotFoundPage = () => (
   <div className="container is-content">
     <section className="section">
       <div className="content has-text-centered">
-        <p className="title is-1 has-text-black">404</p>
+        <p className="title has-text-black">404</p>
         <h1 className="subtitle has-text-black has-text-weight-bold">
           Página no encontrada
         </h1>

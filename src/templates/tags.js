@@ -24,7 +24,7 @@ class TagRoute extends React.Component {
         <Helmet title={`${tag} | ${title}`} />
         <section className="section">
           <div className="content">
-            <h1 className="is-size-3 has-text-black has-text-weight-bold">
+            <h1 className="is-size-3 is-size-4-mobile has-text-black has-text-weight-bold">
               {tagHeader}
             </h1>
             <ul>{postLinks}</ul>

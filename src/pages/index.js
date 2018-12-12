@@ -29,7 +29,7 @@ const IndexPage = (props) => {
         <html lang="es" />
       </Helmet>
       <section className="section has-text-centered">
-        <h1 className="title is-1 has-text-black has-text-weight-bold">
+        <h1 className="title is-1 is-size-3-mobile has-text-black has-text-weight-bold">
           Comunidad de JavaScript
           {' '}
           <br />
@@ -38,7 +38,7 @@ const IndexPage = (props) => {
         <ExternalLink
           eventLabel="Link registro"
           to="https://www.meetup.com/es-ES/horchatajs/"
-          className="button is-primary is-large has-text-black"
+          className="button is-primary is-large has-text-black is-size-5-mobile"
           target="_blank"
           rel="noopener noreferrer"
         >
