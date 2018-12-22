@@ -42,7 +42,9 @@ module.exports = async ({ boundActionCreators }) => {
     response = mockedResponseProfiles;
   }
 
-  response.data.results.map(user => {
+  const data = response.data.results || [];
+
+  data.map(user => {
     // Setup user node
     const userNode = {
       id: `${user.member_id}`,
