@@ -36,7 +36,7 @@
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",
-    "release": "gatsby release",
+    "release": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
