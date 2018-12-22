@@ -25,7 +25,8 @@ module.exports = async ({ boundActionCreators }) => {
   };
 
   // Fetch members information
-  const fetchMembers = () => axios.get(meetupProfilesEndpoint, meetupProfilesConfig);
+  const fetchMembers = () =>
+    axios.get(meetupProfilesEndpoint, meetupProfilesConfig);
   let response = {};
 
   try {
@@ -41,7 +42,7 @@ module.exports = async ({ boundActionCreators }) => {
     response = mockedResponseProfiles;
   }
 
-  response.data.results.map((user) => {
+  response.data.results.map(user => {
     // Setup user node
     const userNode = {
       id: `${user.member_id}`,
@@ -54,7 +55,7 @@ module.exports = async ({ boundActionCreators }) => {
       profile: {
         id: user.member_id,
         name: user.name,
-        photo: user.photo.thumb_link,
+        photo: user.photo.thumb_link || 'https://via.placeholder.com/64',
       },
     };
 
