@@ -60,7 +60,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
-//Mobile Navbar
+//Touch BreakPoint
 @media screen and (max-width: 1087px) {
   .navbar-burger,
   .navbar-menu,
@@ -71,5 +71,20 @@ body {
   .navbar-item {
     font-size: 1.2em;
     font-weight: 700;
+  }
+}
+
+//Mobile BreakPoint
+@media screen and (max-width: 769px){
+  .content h1{
+    font-size: 1.5rem
+  }
+
+  .content h2{
+    font-size: 1.25rem
+  }
+
+  .content h3, .content h4, .content h5, .content h6{
+   font-size: 1rem
   }
 }

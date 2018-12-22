@@ -15,7 +15,7 @@ const TagsPage = ({
     <Helmet title={`Etiquetas | ${title}`} />
     <section className="section">
       <div className="content">
-        <h1 className="is-size-3 has-text-black has-text-weight-bold">
+        <h1 className="has-text-black has-text-weight-bold">
           Etiquetas
         </h1>
       </div>
