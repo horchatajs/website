@@ -12,8 +12,8 @@
       </p>
 
     <div class="flex flex-col justify-center rubik">
-      <button class="bg-yellow mt-2 pt-3 pb-3 pl-5 pr-5 rounded">
-        Registrate ➡
+      <button class="flex justify-center items-center bg-yellow mt-2 pt-3 pb-3 pl-5 pr-5 rounded">
+        Registrate <span><i class="ml-3 ic-arrow"></i></span>
       </button>
       <div class="text-xs text-grey mt-3">
         Registrate y aprendé con nosotros ✌

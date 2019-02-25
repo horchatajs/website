@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'horchata-icons';
+  src:  url('fonts/horchata-icons.eot?ernvkc');
+  src:  url('fonts/horchata-icons.eot?ernvkc#iefix') format('embedded-opentype'),
+    url('fonts/horchata-icons.ttf?ernvkc') format('truetype'),
+    url('fonts/horchata-icons.woff?ernvkc') format('woff'),
+    url('fonts/horchata-icons.svg?ernvkc#horchata-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'horchata-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-arrow:before {
+  content: "\e920";
+}
+.ic-facebook:before {
+  content: "\e921";
+  color: #c8c8c8;
+}
+.ic-github:before {
+  content: "\e922";
+  color: #c8c8c8;
+}
+.ic-instagram:before {
+  content: "\e923";
+  color: #c8c8c8;
+}
+.ic-twitter:before {
+  content: "\e924";
+  color: #c8c8c8;
+}
