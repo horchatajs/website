@@ -10,19 +10,27 @@
       Una comunidad de Javascript en El Salvador, Centroamérica 🇸🇻
     </p>
 
-    <div class="flex flex-col justify-center rubik">
-      <button class="flex justify-center items-center bg-yellow mt-2 pt-3 pb-3 pl-5 pr-5 rounded hover:bg-yellow-dark outline-none">
-        Registrate <span><i class="ml-3 ic-arrow"></i></span>
-      </button>
-      <div class="text-xs text-grey mt-3">
+    <app-button>
+      <template v-slot:button-text>
+        Registrate
+      </template>
+      <template v-slot:icon>
+        <span><i class="ml-3 ic-arrow" /></span>
+      </template>
+      <template v-slot:sub-text>
         Registrate y aprendé con nosotros ✌
-      </div>
-    </div>
+      </template>
+    </app-button>
   </div>
 </template>
 
 <script>
-export default {}
+import AppButton from '~/components/AppButton'
+export default {
+  components: {
+    AppButton
+  }
+}
 </script>
 
 <style>
