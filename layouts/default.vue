@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-4">
+  <div class="p-8">
     <div class="flex flex-col">
       <!-- Top Level -->
       <div class="flex justify-between items-center mb-6">
@@ -12,11 +12,8 @@
           Menu
         </div>
       </div>
-
       <!-- Content -->
-      <div class="container">
-        <nuxt />
-      </div>
+      <nuxt />
     </div>
   </div>
 </template>
