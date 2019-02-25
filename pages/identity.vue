@@ -1,6 +1,6 @@
 <template>
   <div>
-    Inicio - HorchataJS
+    Identidad (Misión y Visión) - HorchataJS
   </div>
 </template>
 

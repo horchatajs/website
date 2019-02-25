@@ -1,6 +1,6 @@
 <template>
   <div>
-    Inicio - HorchataJS
+    Patrocinios - HorchataJS
   </div>
 </template>
 

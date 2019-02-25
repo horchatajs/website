@@ -1,6 +1,6 @@
 <template>
   <div>
-    Inicio - HorchataJS
+    Eventos - HorchataJS
   </div>
 </template>
 
