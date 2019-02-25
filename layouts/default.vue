@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8">
-    <div class="flex flex-col">
+  <div class="p-8 h-screen">
+    <div class="flex flex-col h-full">
       <!-- Top Level -->
       <div class="flex justify-between items-center mb-6">
         <img

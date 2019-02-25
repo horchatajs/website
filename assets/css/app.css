@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700,900');
 
-body,html {
+body,
+html {
   font-family: 'Work Sans', sans-serif;
 }
 .work-sans {
   font-family: 'Work Sans', sans-serif;
+}
+
+.rubik {
+  font-family: 'Rubik', sans-serif;
 }

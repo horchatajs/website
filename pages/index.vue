@@ -1,6 +1,24 @@
 <template>
-  <div>
-    Inicio - HorchataJS
+  <div class="flex flex-col items-center justify-between h-full">
+
+    <img src="~/assets/images/home.svg" alt="home" width="auto">
+
+    <div class="font-bold tracking-normal text-2xl w-48 text-center p-4">
+      ¡Hey! Somos HorchataJS
+    </div>
+
+      <p class="text-center w-64">
+      Una comunidad de Javascript en El Salvador, Centroamérica :sv:
+      </p>
+
+    <div class="flex flex-col justify-center rubik">
+      <button class="bg-yellow mt-2 pt-3 pb-3 pl-5 pr-5 rounded">
+        Registrate ➡
+      </button>
+      <div class="text-xs text-grey mt-3">
+        Registrate y aprendé con nosotros ✌
+      </div>
+    </div>
   </div>
 </template>
 
