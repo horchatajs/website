@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col rubik">
-    <button class="flex justify-center items-center bg-yellow mt-2 pt-3 pb-3 pl-5 pr-5 rounded hover:bg-yellow-dark outline-none">
+  <div class="flex flex-col items-center lg:items-end mb-0 rubik">
+    <button class="flex justify-center bg-yellow mt-8 lg:mt-12 w-64 h-10 rounded hover:bg-yellow-dark outline-none">
       <slot name="button-text" />
       <slot name="icon" />
     </button>
