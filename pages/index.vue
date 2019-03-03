@@ -2,22 +2,20 @@
   <div class="flex flex-1 flex-col lg:flex-row items-center justify-center">
     <img src="~/assets/images/home.svg" alt="home illustation" width="700">
 
-    <div class="flex flex-col text-center lg:text-right h-full mb-3">
-      <div
-        class="lg:inline hidden font-bold tracking-normal text-3xl w-auto p-4 lg:text-6xl"
-      >
+    <div class="flex flex-col items-center lg:items-end h-full mb-3">
+      <div class="lg:inline hidden font-bold tracking-normal text-3xl w-auto p-4 lg:text-6xl lg:text-right">
         ¡Hey!
         <div>Somos</div>HorchataJS
       </div>
 
       <div
-        class="lg:hidden inline font-bold tracking-normal text-3xl w-auto p-4 lg:text-6xl"
+        class="lg:hidden inline font-bold tracking-normal text-3xl w-auto p-4 lg:text-6xl lg:text-right"
       >
         ¡Hey! Somos
         <div>HorchataJS</div>
       </div>
 
-      <div class="flex flex-col text-lg leading-normal">
+      <div class="flex flex-col text-lg items-center lg:items-end leading-normal">
         Una comunidad de Javascript en
         <div>El Salvador, Centroamérica 🇸🇻</div>
       </div>

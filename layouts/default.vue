@@ -8,7 +8,7 @@
       </div>
     </div>
     <!-- Content -->
-    <div class="flex">
+    <div class="flex mt-16">
       <!-- NavBar -->
       <nav-bar />
       <!-- Main Content -->
