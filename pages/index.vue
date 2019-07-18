@@ -22,7 +22,9 @@
 
       <app-button>
         <template v-slot:button-text>
-          Registrate
+          <span class="font-medium">
+            Registrate
+          </span>
         </template>
         <template v-slot:icon>
           <span>

@@ -20,7 +20,7 @@
 
       <app-button>
         <template v-slot:button-text>
-          <span class="font-bold">
+          <span class="font-medium">
             Código de Conducta
           </span>
         </template>
