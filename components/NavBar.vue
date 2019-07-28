@@ -59,6 +59,7 @@ export default {
   font-size: 15px;
   cursor: pointer;
   margin-left: -2px;
+  list-style-type: disc;
 }
 
 .side-nav > li span {

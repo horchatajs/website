@@ -143,7 +143,7 @@
           v-for="(section, key) in sections"
           :key="key"
           class="rounded-full outline-none w-8 h-8 shadow-lg lg:mr-4"
-          :class="{'bg-yellow' : `section-${key+1}` === selectedSection }"
+          :class="{'bg-yellow-400' : `section-${key+1}` === selectedSection }"
           @click="selectedSection = section"
         >
           {{ key + 1 }}
