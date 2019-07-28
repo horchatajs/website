@@ -11,6 +11,9 @@ module.exports = {
           600: '#dac308',
           700: '#c2ad07'
         }
+      },
+      fontSize: {
+        '7xl': '4.5rem'
       }
     }
   },
