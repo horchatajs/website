@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center w-full">
     <div class="font-bold text-2xl md:text-7xl">
-      Somos un Team
+      Somos un Equipo
     </div>
     <div class="text-center text-sm tracking-wide font-light pt-6 md:text-xl">
       Una comunidad de JavaScript en

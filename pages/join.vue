@@ -6,7 +6,7 @@
       alt="Join"
       width="700">
     <div class="flex flex-col text-center items-center -mt-16 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
-      <div class="font-bold text-2xl lg:text-6xl xl:leading-tight">
+      <div class="font-bold text-2xl md:text-5xl lg:text-6xl xl:leading-tight">
         Formá parte<br class="hidden xl:inline xl:-mt-8"> del equipo
       </div>
 
@@ -15,7 +15,7 @@
           <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
             {{ activity.title }}
           </h3>
-          <div class="tracking-wide mt-2 font-light" v-html="activity.body" />
+          <div class="tracking-wide mt-2 font-light text-sm sm:text-lg" v-html="activity.body" />
         </div>
 
         <div class="flex justify-center mt-4">
@@ -27,7 +27,7 @@
             @click="next(index)" />
         </div>
       </div>
-      <div class="tracking-wide text-lg font-light hidden xl:inline xl:mt-12">
+      <div class="tracking-wide text-sm sm:text-lg font-light hidden xl:inline xl:mt-12">
         Tu charla puede ser acerca de Javascript o temas
         <br>relacionados a su uso; cualquier experiencia,
         <br>proyecto o historia es bienvenida. Y no, no necesitás
@@ -35,16 +35,17 @@
 
         <p class="mt-10">
           Tratamos de planear todo en comunidad. Chateá
-          <br>con nosotros en 
-          <a 
-            target="_blank" 
-            class="font-medium text-yellow-400" 
+          <br>con nosotros en
+          <a
+            target="_blank"
+            class="font-medium text-yellow-400"
             href="http://slack.horchatajs.com">Slack</a> o
-          participá en 
-          <a 
-            target="_blank" 
-            class="font-medium text-yellow-400" 
-            href="https://github.com/horchatajs">Github</a></p>
+          participá en
+          <a
+            target="_blank"
+            class="font-medium text-yellow-400"
+            href="https://github.com/horchatajs">Github</a>
+        </p>
       </div>
       <app-button link="http://slack.horchatajs.com" class="mt-8">
         <template v-slot:button-text>

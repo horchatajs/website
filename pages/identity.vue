@@ -1,27 +1,57 @@
 <template>
-  <div class="flex flex-1 flex-col lg:flex-row items-center justify-center">
+  <div class="flex flex-col items-center w-full justify-between xl:flex-row">
+    <img
+      class="-mt-32 sm:mt-0 xl:ml-32"
+      src="~/assets/images/identity.svg"
+      alt="Join"
+      width="700">
+    <div class="flex flex-col text-center items-center -mt-16 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+      <div class="xl:hidden">
+        <div class="mt-3">
+          <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
+            {{ activity.title }}
+          </h3>
+          <div class="tracking-wide mt-2 font-light" v-html="activity.body" />
+        </div>
 
-    <img class="w-2/5 ml-4" src="~/assets/images/identity.svg" alt="identity illustation" width="700">
-
-    <div class="flex flex-col lg:w-2/5 items-center h-full mb-3 lg:items-end justify-between">
-      <div class="text-center tracking-wide text-sm lg:w-3/4 lg:text-right lg:mr-3">
-        <p class="text-grey uppercase font-bold mb-2 text-xs sm:text-sm">Misión</p>
-        <p class="sm:text-lg lg:text-xl">
-          Crear eventos, talleres y actividades educativas que beneficien y hagan crecer la comunidad de desarrolladores en el país.
-        </p>
+        <div class="flex justify-center mt-4">
+          <div
+            v-for="(val, index) in activities"
+            :key="index"
+            class="p-1 bg-gray-500 rounded-full mr-2 cursor-pointer"
+            :class="{ 'bg-gray-800': index === activeIndex}"
+            @click="next(index)" />
+        </div>
       </div>
 
-      <div class="text-center tracking-wide text-sm lg:w-3/4 lg:text-right lg:mr-3 mt-10">
-        <p class="text-grey uppercase font-bold mb-2 text-xs sm:text-sm">Visión</p>
-        <p class="sm:text-lg lg:text-xl">
-          Ser una comunidad de JavaScript reconocida nacional e internacionalmente por la calidad de contenido y el compromiso con la educación de personas interesadas en aprender y compartir.
-        </p>
-      </div>
+      <div class="tracking-wide text-lg font-light hidden mb-20 xl:inline xl:mt-12">
+        <div>
+          <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
+            misión
+          </h3>
+          <div class="tracking-wide mt-2 font-light">
+            Crear eventos, talleres y actividades<br>
+            educativas que beneficien y hagan crecer la<br>
+            comunidad de desarrolladores en el país.
+          </div>
+        </div>
 
-      <app-button>
+        <div class="mt-32">
+          <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
+            visión
+          </h3>
+          <div class="tracking-wide mt-2 font-light">
+            Ser una comunidad de JavaScript reconocida<br>
+            nacional e internacionalmente por la calidad<br>
+            de contenido y el compromiso con la<br>
+            educación de personas interesadas en aprender y compartir.
+          </div>
+        </div>
+      </div>
+      <app-button link="http://slack.horchatajs.com" class="mt-8">
         <template v-slot:button-text>
-          <span class="font-medium">
-            Código de Conducta
+          <span>
+            Código de conducta
           </span>
         </template>
         <template v-slot:icon>
@@ -30,24 +60,50 @@
           </span>
         </template>
         <template v-slot:sub-text>
-          <span class="text-xs text-center tracking-wide sm:text-sm">
-            Se espera que todos los miembros sigan el código de conducta de la comunidad
+          <span>
+            Se espera que todos los miembros sigan el código de<br class="hidden xl:inline">
+            conducta de la comunidad
           </span>
         </template>
       </app-button>
     </div>
-
   </div>
 </template>
 
 <script>
 import AppButton from '~/components/AppButton'
+
 export default {
   components: {
     AppButton
+  },
+  data() {
+    return {
+      activity: {},
+      counter: 0,
+      activeIndex: 0,
+      activities: [
+        {
+          title: 'misión',
+          body:
+            'Crear eventos, talleres y actividades educativas que beneficien y hagan crecer la comunidad de desarrolladores en el país.'
+        },
+        {
+          title: 'visión',
+          body: `Ser una comunidad de JavaScript reconocida nacional e internacionalmente por la calidad de contenido y el compromiso con la educación de personas interesadas en aprender y compartir.`
+        }
+      ]
+    }
+  },
+  beforeMount() {
+    this.activity = this.activities[0]
+  },
+  methods: {
+    next(index) {
+      this.counter++
+      this.activeIndex = index
+      this.activity = this.activities[index]
+    }
   }
 }
 </script>
-
-<style>
-</style>
