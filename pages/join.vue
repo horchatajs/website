@@ -5,7 +5,7 @@
       src="~/assets/images/join.svg"
       alt="Join"
       width="700">
-    <div class="flex flex-col text-center items-center -mt-16 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+    <div class="flex flex-col text-center items-center -mt-32 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
       <div class="font-bold text-2xl md:text-5xl lg:text-6xl xl:leading-tight">
         Formá parte<br class="hidden xl:inline xl:-mt-8"> del equipo
       </div>

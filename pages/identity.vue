@@ -5,18 +5,18 @@
       src="~/assets/images/identity.svg"
       alt="Join"
       width="700">
-    <div class="flex flex-col text-center items-center -mt-16 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+    <div class="flex flex-col text-center items-center -mt-32 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
       <div class="xl:hidden">
         <div class="mt-3">
           <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
-            {{ activity.title }}
+            {{ identity.title }}
           </h3>
-          <div class="tracking-wide mt-2 font-light" v-html="activity.body" />
+          <div class="tracking-wide mt-2 font-light" v-html="identity.body" />
         </div>
 
         <div class="flex justify-center mt-4">
           <div
-            v-for="(val, index) in activities"
+            v-for="(val, index) in identities"
             :key="index"
             class="p-1 bg-gray-500 rounded-full mr-2 cursor-pointer"
             :class="{ 'bg-gray-800': index === activeIndex}"
@@ -79,10 +79,9 @@ export default {
   },
   data() {
     return {
-      activity: {},
-      counter: 0,
+      identity: {},
       activeIndex: 0,
-      activities: [
+      identities: [
         {
           title: 'misión',
           body:
@@ -96,13 +95,12 @@ export default {
     }
   },
   beforeMount() {
-    this.activity = this.activities[0]
+    this.identity = this.identities[0]
   },
   methods: {
     next(index) {
-      this.counter++
       this.activeIndex = index
-      this.activity = this.activities[index]
+      this.identity = this.identities[index]
     }
   }
 }
