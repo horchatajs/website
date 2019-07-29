@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar" class="items-center pl-16 mt-16">
+  <div id="navbar" class="items-center pl-16 mt-16 hidden lg:inline">
     <ul class="side-nav flex flex-col justify-between relative p-0 m-0">
       <nuxt-link v-for="(item, key) in items" :key="key" tag="li" :to="item.to" exact>
         <span>{{ item.name }}</span>
@@ -27,12 +27,6 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 1180px) {
-  #navbar {
-    display: none;
-  }
-}
-
 .side-nav {
   max-height: 35rem;
   height: 35rem;

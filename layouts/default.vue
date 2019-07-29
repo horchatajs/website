@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 1181px) {
+@media (min-width: 1024px) {
   .menu-button {
     display: none;
   }
