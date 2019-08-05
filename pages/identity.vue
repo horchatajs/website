@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col items-center w-full justify-between xl:flex-row">
     <img
-      class="-mt-32 sm:mt-0 xl:ml-32"
+      class="xl:ml-32"
       src="~/assets/images/identity.svg"
       alt="Join"
       width="700">
-    <div class="flex flex-col text-center items-center -mt-32 sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+    <div class="flex flex-col text-center items-center sm:mt-4 xl:items-end xl:text-right xl:mr-32">
       <div class="xl:hidden">
         <div class="mt-3">
           <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
