@@ -1,41 +1,45 @@
 <template>
   <div class="flex flex-1 flex-col lg:flex-row items-center justify-center">
-    <div class="flex flex-col justify-between">
-      <transition-group name="slide-fade">
+    <div class="flex flex-col justify-between w-full">
+      <transition-group name="slide-fade" mode="out-in">
+        <!-- Section 1 -->
         <div
           v-show="selectedSection === 'section-1'"
           :key="'section-1'"
-          class="flex flex-col lg:flex-row"
-        >
-          <img src="~/assets/images/about-1.svg" alt="about-1 illustation" width="700">
-
-          <div class="flex flex-col items-center lg:items-end h-full mb-3">
-            <div
-              class="font-bold tracking-normal text-2xl text-center p-4 lg:text-6xl lg:text-right"
-            >
-              Aprender
-              <p>& Compartir</p>
+          class="flex flex-col w-full items-center justify-between xl:flex-row">
+          <img
+            src="~/assets/images/about-1.svg"
+            alt="Join"
+            width="500">
+          <div class="flex flex-col text-center items-center xl:items-end xl:text-right mt-8 xl:-mt-32">
+            <div class="font-bold text-2xl md:text-5xl lg:text-6xl xl:leading-tight">
+              Aprender<br class="xl:-mt-8"> & Compartir
             </div>
-            <div
-              class="tracking-wide text-center text-sm lg:text-lg lg:text-right lg:leading-normal lg:mt-8"
-            >
-              Somos una comunidad de desarrolladores en El Salvador que nació en el 2015 con el objetivo de ofrecer un espacio gratuito y abierto para aprender y compartir conocimiento sobre JavaScript además de crear espacios de networking
+            <div class="tracking-wide text-sm mt-6 sm:text-lg font-light">
+              Somos una comunidad de desarrolladores en <br>
+              El Salvador que nació en el 2015 con el objetivo de <br>
+              ofrecer un espacio gratuito y abierto para aprender y <br>
+              compartir conocimiento sobre JavaScript <br>
+              además de crear espacios de networking.
             </div>
           </div>
         </div>
-        <div v-show="selectedSection === 'section-2'" :key="'section-2'" class="flex flex-col">
-          <div class="flex justify-center text-sm mt-10 lg:mt-12">
-            <div class="tracking-wide text-center lg:w-1/2 lg:leading-normal lg:text-lg">
-              Con tu apoyo nuestra comunidad ha ido creciendo y
+        <!-- Section 2 -->
+        <div
+          v-show="selectedSection === 'section-2'"
+          :key="'section-2'"
+          class="flex flex-col items-center w-full justify-between">
+          <div class="flex justify-center text-sm">
+            <div class="tracking-wide text-sm font-light text-center sm:text-lg">
+              Con tu apoyo nuestra comunidad ha ido creciendo y <br class="hidden sm:inline">
               estamos orgullosos de seguir compartiendo con más personas
             </div>
           </div>
-          <div class="flex justify-around mt-8 mb-8">
+          <div class="flex mt-8 mb-6 w-full justify-center -mr-4">
             <div
               v-for="(indicator, key) in indicators"
               :key="key"
-              class="flex flex-col text-center mr-3"
-            >
+              class="flex flex-col text-center tracking-wide mr-4">
               <div class="text-4xl lg:text-5xl font-bold">
                 {{ indicator.value }}
               </div>
@@ -43,46 +47,33 @@
                 {{ indicator.name }}
               </div>
             </div>
-            <!-- <div class="flex flex-col text-center mr-3">
-              <div class="text-4xl font-bold">700</div>
-              <div class="text-xs">Miembros en Slack</div>
-            </div>
-            <div class="flex flex-col text-center">
-              <div class="text-4xl font-bold">500</div>
-              <div class="text-xs">Han asistido a eventos</div>
-            </div>-->
           </div>
-          <img class="hidden sm:inline" width="1200" src="~/assets/images/about-2.svg" alt="about-1 illustation">
           <img
-            class="inline sm:hidden w-full"
-            src="~/assets/images/about-2-1.svg"
-            alt="about-1 illustation"
-          >
+            class="object-cover h-64 sm:object-contain sm:h-full"
+            width="1200"
+            src="~/assets/images/about-2.svg"
+            alt="about-1 illustation">
         </div>
         <div
           v-show="selectedSection === 'section-3'"
           :key="'section-3'"
-          class="flex flex-col lg:flex-row"
-        >
-          <img src="~/assets/images/about-3.svg" alt="about-3 illustation" width="1500">
-          <div class="flex flex-col lg:items-end">
-            <div class="flex justify-center text-sm mt-10 lg:mt-12">
-              <div class="tracking-wide text-center lg:leading-normal lg:text-lg lg:text-right">
-                Como comunidad hemos estado presentes y
+          class="flex flex-col w-full items-center justify-between xl:flex-row">
+          <img
+            src="~/assets/images/about-3.svg"
+            width="700"
+            alt="about-3 illustation"
+            class="xl:ml-20">
+          <div class="flex flex-col">
+            <div class="flex justify-center text-sm lg:mt-0 xl:justify-end">
+              <div class="tracking-wide text-sm mt-6 text-center xl:text-right sm:text-lg font-light">
+                Como comunidad hemos estado presentes y <br>
                 participado en eventos como:
               </div>
             </div>
-            <div class="flex flex-wrap justify-center mt-8 mb-8 lg:flex-row lg:justify-end w-auto">
-              <!-- <div v-for="(community, key) in communities" :key="key">
-                <div class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg">
-                  <div class="font-bold">{{ community.name }}</div>
-                  <div class="text-xs">{{ community.from }}</div>
-                </div>
-              </div>-->
-              <div class="flex w-full justify-center lg:justify-end">
+            <div class="flex flex-wrap justify-center mt-4 mb-8 lg:flex-row xl:justify-end">
+              <div class="flex w-full justify-center xl:justify-end">
                 <div
-                  class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg"
-                >
+                  class="pl-8 pr-8 pt-2 pb-2 mt-8 text-center shadow-md mx-1 rounded-lg text-sm xl:p-8 lg:w-48 lg:text-lg">
                   <div class="font-bold">
                     BT7
                   </div>
@@ -90,9 +81,7 @@
                     El Salvador
                   </div>
                 </div>
-                <div
-                  class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg"
-                >
+                <div class="pl-8 pr-8 pt-2 pb-2 mt-8 text-center shadow-md mx-1 rounded-lg text-sm xl:p-8 lg:w-48 lg:text-lg">
                   <div class="font-bold">
                     NodeSchool
                   </div>
@@ -101,10 +90,9 @@
                   </div>
                 </div>
               </div>
-              <div class="flex w-full justify-center lg:justify-end">
+              <div class="flex w-full justify-center xl:justify-end">
                 <div
-                  class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg"
-                >
+                  class="pl-8 pr-8 pt-2 pb-2 mt-8 text-center shadow-md mx-1 rounded-lg text-sm xl:p-8 lg:w-48 lg:text-lg">
                   <div class="font-bold">
                     F8 Meetup
                   </div>
@@ -113,8 +101,7 @@
                   </div>
                 </div>
                 <div
-                  class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg"
-                >
+                  class="pl-8 pr-8 pt-2 pb-2 mt-8 text-center shadow-md mx-1 rounded-lg text-sm xl:p-8 lg:w-48 lg:text-lg">
                   <div class="font-bold">
                     Dribble
                   </div>
@@ -125,8 +112,7 @@
               </div>
 
               <div
-                class="p-8 mt-2 text-center shadow-md mx-1 rounded-lg text-xs lg:w-48 lg:text-lg"
-              >
+                class="pl-8 pr-8 pt-2 pb-2 mt-8 text-center shadow-md mx-1 rounded-lg text-sm xl:p-8 lg:w-48 lg:text-lg">
                 <div class="font-bold">
                   Creative Mornings
                 </div>
@@ -138,16 +124,13 @@
           </div>
         </div>
       </transition-group>
-      <div class="flex justify-around lg:justify-center items-center mt-20">
+      <div class="flex justify-center items-center mt-10 mb-4">
         <button
           v-for="(section, key) in sections"
           :key="key"
-          class="rounded-full outline-none w-8 h-8 shadow-lg lg:mr-4"
+          class="rounded-full outline-none p-1 bg-gray-800 mr-4"
           :class="{'bg-yellow-400' : `section-${key+1}` === selectedSection }"
-          @click="selectedSection = section"
-        >
-          {{ key + 1 }}
-        </button>
+          @click="next(section)" />
       </div>
     </div>
   </div>
@@ -157,6 +140,8 @@
 export default {
   data() {
     return {
+      loopId: null,
+      sectionLoop: 1,
       selectedSection: 'section-1',
       sections: ['section-1', 'section-2', 'section-3'],
       indicators: [
@@ -195,6 +180,19 @@ export default {
           from: 'El Salvador'
         }
       ]
+    }
+  },
+  mounted() {
+    this.loopId = setInterval(() => {
+      this.sectionLoop++
+      if (this.sectionLoop > this.sections.length) this.sectionLoop = 1
+      this.selectedSection = 'section-' + this.sectionLoop
+    }, 5000)
+  },
+  methods: {
+    next(section) {
+      clearInterval(this.loopId)
+      this.selectedSection = section
     }
   }
 }
