@@ -14,6 +14,9 @@ module.exports = {
       },
       fontSize: {
         '7xl': '4.5rem'
+      },
+      maxWidth: {
+        '7xl': '85rem'
       }
     }
   },
