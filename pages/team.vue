@@ -8,12 +8,13 @@
       <br>
       El Salvador, Centroamérica. 🇸🇻
     </div>
-    <div class="flex flex-wrap mt-5 w-full md:pt-20 md:justify-between lg:pl-16 lg:pr-16">
+    <div class="flex flex-wrap mt-5 w-full md:pt-16 md:justify-between lg:pl-16 lg:pr-16">
       <div
         v-for="(founder, index) in founders"
         :key="index"
-        class="flex flex-col items-center text-center w-1/2 mb-4 md:w-1/3  xl:w-auto">
+        class="flex flex-col items-center text-center w-1/2 mb-4 md:w-1/3 xl:w-auto">
         <img
+          class="xl:p-8 xl:-mb-6"
           :src="founder.image"
           :alt="founder.name">
         <span class="font-bold md:text-lg">{{ founder.name }}</span>

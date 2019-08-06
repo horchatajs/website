@@ -24,6 +24,7 @@
             </div>
           </div>
         </div>
+
         <!-- Section 2 -->
         <div
           v-show="selectedSection === 'section-2'"
@@ -54,6 +55,8 @@
             src="~/assets/images/about-2.svg"
             alt="about-1 illustation">
         </div>
+
+        <!-- Section 3 -->
         <div
           v-show="selectedSection === 'section-3'"
           :key="'section-3'"
@@ -61,8 +64,7 @@
           <img
             src="~/assets/images/about-3.svg"
             width="700"
-            alt="about-3 illustation"
-            class="xl:ml-20">
+            alt="about-3 illustation">
           <div class="flex flex-col">
             <div class="flex justify-center text-sm lg:mt-0 xl:justify-end">
               <div class="tracking-wide text-sm mt-6 text-center xl:text-right sm:text-lg font-light">

@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col items-center w-full justify-between xl:flex-row">
     <img
-      class="xl:ml-32"
       src="~/assets/images/identity.svg"
       alt="Join"
-      width="700">
-    <div class="flex flex-col text-center items-center sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+      width="500">
+    <div class="flex flex-col text-center items-center sm:mt-4 xl:items-end xl:text-right">
       <div class="xl:hidden">
         <div class="mt-3">
           <h3 class="tracking-widest uppercase text-sm font-medium text-gray-400 work-sans">
@@ -50,8 +49,8 @@
       </div>
       <app-button link="http://slack.horchatajs.com" class="mt-8">
         <template v-slot:button-text>
-          <span>
-            Código de conducta
+          <span class="normal-case">
+            Código de <span class="capitalize">conducta</span>
           </span>
         </template>
         <template v-slot:icon>

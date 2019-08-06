@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col items-center w-full justify-between xl:flex-row">
     <img
-      class="xl:ml-32"
       src="~/assets/images/home.svg"
       alt="Join"
-      width="700">
-  <div class="flex flex-col text-center items-center sm:mt-4 xl:items-end xl:text-right xl:mr-32">
+      width="600">
+    <div class="flex flex-col text-center items-center xl:-mt-32 xl:items-end xl:text-right">
       <div class="font-bold text-2xl md:text-5xl lg:text-6xl xl:leading-tight">
         ¡Hey!<br class="hidden xl:inline xl:-mt-8"> Somos <br class="inline xl:-mt-8">HorchataJS
       </div>
