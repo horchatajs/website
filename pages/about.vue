@@ -130,7 +130,7 @@
         <button
           v-for="(section, key) in sections"
           :key="key"
-          class="rounded-full outline-none p-1 bg-gray-800 mr-4"
+          class="rounded-full outline-none p-1 bg-gray-800 mr-4 focus:outline-none focus:shadow-outline"
           :class="{'bg-yellow-400' : `section-${key+1}` === selectedSection }"
           @click="next(section)" />
       </div>
