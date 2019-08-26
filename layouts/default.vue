@@ -10,7 +10,11 @@
       <!-- NavBar -->
       <nav-bar />
       <!-- Main Content -->
-      <nuxt />
+      <transition
+        name="fade"
+        mode="out-in">
+        <nuxt />
+      </transition>
       <!-- Contact Section -->
       <div class="lg:inline hidden text-center ml-4 w-10">
         <div class="mb-12">

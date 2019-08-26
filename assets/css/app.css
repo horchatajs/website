@@ -12,3 +12,13 @@ html {
 .rubik {
   font-family: 'Rubik', sans-serif;
 }
+
+/* Page transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
