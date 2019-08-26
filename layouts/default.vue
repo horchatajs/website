@@ -3,9 +3,7 @@
     <!-- Toolbar -->
     <div class="flex justify-between items-center mb-6">
       <img class="h-10" src="~/assets/images/full-logo.svg" alt="full-logo">
-      <div class="menu-button">
-        Menu
-      </div>
+      <responsive-menu class="inline lg:hidden" />
     </div>
     <!-- Content -->
     <div class="flex mt-16">
@@ -23,18 +21,12 @@
 
 <script>
 import NavBar from '../components/NavBar'
+import ResponsiveMenu from '../components/ResponsiveMenu'
 
 export default {
   components: {
-    NavBar
+    NavBar,
+    ResponsiveMenu
   }
 }
 </script>
-
-<style scoped>
-@media (min-width: 1024px) {
-  .menu-button {
-    display: none;
-  }
-}
-</style>
