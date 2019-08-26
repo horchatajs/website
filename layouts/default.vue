@@ -12,8 +12,43 @@
       <!-- Main Content -->
       <nuxt />
       <!-- Contact Section -->
-      <div class="lg:inline hidden">
-        contactos
+      <div class="lg:inline hidden text-center ml-4 w-10">
+        <div class="mb-12">
+          <span class="text-yellow-400">
+            <i class="ic-arrow" />
+          </span>
+        </div>
+        <div class="social absolute -ml-6">
+          <a href="https://horchatajs.com/blog/" target="_blank">
+            Leé el blog
+          </a>
+        </div>
+        <div class="flex flex-col justify-end items-center h-full">
+          <a href="https://github.com/horchatajs" target="_blank">
+            <img
+              class="w-12"
+              :src="require('~/assets/css/icons/social/github.svg')"
+              alt="github">
+          </a>
+          <a href="https://facebook.com/horchatajs" target="_blank">
+            <img
+              class="w-12"
+              :src="require('~/assets/css/icons/social/facebook.svg')"
+              alt="facebook">
+          </a>
+          <a href="https://twitter.com/horchatajs" target="_blank">
+            <img
+              class="w-12"
+              :src="require('~/assets/css/icons/social/twitter.svg')"
+              alt="twitter">
+          </a>
+          <a href="https://instagram.com/horchatajs" target="_blank">
+            <img
+              class="w-12"
+              :src="require('~/assets/css/icons/social/instagram.svg')"
+              alt="instagram">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -30,3 +65,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.social {
+  transform: rotate(270deg);
+}
+</style>

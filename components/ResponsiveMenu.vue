@@ -28,17 +28,43 @@
       </svg>
     </div>
     <div
-      class="overlay bg-white mt-20"
+      class="overlay bg-white mt-32"
       :class="{'open': open}">
-      <nav class="overlay-menu text-3xl">
-        <ul class="flex flex-col justify-between mt-64">
+      <nav class="text-3xl">
+        <ul class="flex flex-col items-center mt-64">
           <li
             v-for="(r, index) in routes"
             :key="index"
-            class="mt-4 font-bold"
+            class="mt-8 font-bold cursor-pointer w-auto"
             @click="navigate(r.path)">
             {{ r.title }}
           </li>
+          <div class="flex flex-col items-end w-full -mt-20 pr-8">
+            <a href="https://github.com/horchatajs" target="_blank">
+              <img
+                class="w-12"
+                :src="require('~/assets/css/icons/social/github.svg')"
+                alt="github">
+            </a>
+            <a href="https://facebook.com/horchatajs" target="_blank">
+              <img
+                class="w-12"
+                :src="require('~/assets/css/icons/social/facebook.svg')"
+                alt="facebook">
+            </a>
+            <a href="https://twitter.com/horchatajs" target="_blank">
+              <img
+                class="w-12"
+                :src="require('~/assets/css/icons/social/twitter.svg')"
+                alt="twitter">
+            </a>
+            <a href="https://instagram.com/horchatajs" target="_blank">
+              <img
+                class="w-12"
+                :src="require('~/assets/css/icons/social/instagram.svg')"
+                alt="instagram">
+            </a>
+          </div>
         </ul>
       </nav>
     </div>
