@@ -5,6 +5,7 @@
       :key="index"
       class="shadow-lg rounded-lg mx-2 my-2 bg-white inline-block">
       <img
+        loading="lazy"
         class="w-full rounded-t-lg"
         :src="event.image"
         alt="1.0.0">

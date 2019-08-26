@@ -14,6 +14,7 @@
         :key="index"
         class="flex flex-col items-center text-center w-1/2 mb-4 md:w-1/3 xl:w-auto">
         <img
+          loading="lazy"
           class="xl:p-8 xl:-mb-6"
           :src="founder.image"
           :alt="founder.name">

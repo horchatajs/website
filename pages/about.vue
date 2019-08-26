@@ -8,6 +8,7 @@
           :key="'section-1'"
           class="flex flex-col w-full items-center justify-between xl:flex-row">
           <img
+            loading="lazy"
             src="~/assets/images/about-1.svg"
             alt="Join"
             width="500">
@@ -50,6 +51,7 @@
             </div>
           </div>
           <img
+            loading="lazy"
             class="object-cover h-64 sm:object-contain sm:h-full"
             width="1200"
             src="~/assets/images/about-2.svg"
@@ -62,6 +64,7 @@
           :key="'section-3'"
           class="flex flex-col w-full items-center justify-between xl:flex-row">
           <img
+            loading="lazy"
             src="~/assets/images/about-3.svg"
             width="700"
             alt="about-3 illustation">

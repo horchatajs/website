@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col items-center w-full justify-between xl:flex-row">
-    <img      
+    <img
+      loading="lazy"
       src="~/assets/images/sponsor.svg"
       alt="Join"
       width="500">

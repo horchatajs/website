@@ -42,24 +42,28 @@
           <div class="flex flex-col items-end w-full -mt-20 pr-8">
             <a href="https://github.com/horchatajs" target="_blank">
               <img
+                loading="lazy"
                 class="w-12"
                 :src="require('~/assets/css/icons/social/github.svg')"
                 alt="github">
             </a>
             <a href="https://facebook.com/horchatajs" target="_blank">
               <img
+                loading="lazy"
                 class="w-12"
                 :src="require('~/assets/css/icons/social/facebook.svg')"
                 alt="facebook">
             </a>
             <a href="https://twitter.com/horchatajs" target="_blank">
               <img
+                loading="lazy"
                 class="w-12"
                 :src="require('~/assets/css/icons/social/twitter.svg')"
                 alt="twitter">
             </a>
             <a href="https://instagram.com/horchatajs" target="_blank">
               <img
+                loading="lazy"
                 class="w-12"
                 :src="require('~/assets/css/icons/social/instagram.svg')"
                 alt="instagram">
