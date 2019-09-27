@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div
+    <a
       v-for="(event, index) in events"
       :key="index"
+      :href="event.meetupUrl"
+      target="_blank"
       class="shadow-lg rounded-lg mx-2 my-2 bg-white inline-block">
       <img
         loading="lazy"
@@ -17,7 +19,7 @@
           {{ event.date }}
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </template>
 
