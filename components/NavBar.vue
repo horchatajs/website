@@ -2,7 +2,7 @@
   <div id="navbar" class="items-center pl-16 mt-16 hidden lg:inline">
     <ul class="side-nav flex flex-col justify-between relative p-0 m-0">
       <nuxt-link v-for="(item, key) in items" :key="key" tag="li" :to="item.to" exact>
-        <span>{{ item.name }}</span>
+        <span class="flex ml-4 -mt-6">{{ item.name }}</span>
       </nuxt-link>
     </ul>
   </div>
