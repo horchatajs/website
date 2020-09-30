@@ -1,4 +1,4 @@
-# Website
+# Website for Developers
 
 > Sitio web oficial de la comunidad HorchataJS
 
@@ -34,7 +34,7 @@ Ahora podés acceder al sitio en `localhost:8000`
 
 Leé [`CONTRIBUTING.md`](https://github.com/horchatajs/website/blob/master/.github/CONTRIBUTING.md) para más información.
 
-## Links
+##  Essential Links
 
 - Enlace del sitio: [https://www.horchatajs.com/](https://www.horchatajs.com/)
 - Repositorio: https://github.com/horchatajs/website
