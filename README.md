@@ -1,4 +1,4 @@
-# Website
+# Horchatajs Website
 
 > Sitio web oficial de la comunidad HorchataJS
 
