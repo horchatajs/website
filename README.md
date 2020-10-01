@@ -6,7 +6,7 @@ El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo
 
 ## Prerrequisitos
 
-- Tener instalado [Node](https://nodejs.org/es/) v8.0.0+ y [Yarn](https://yarnpkg.com/es-ES/) v1.2.0+.
+- Tener instalado [Node](https://nodejs.org/es/) v8.0.0+ y [Yarn](https://yarnpkg.com/es-ES/) v1.2.0+(yarn-yet another resource negotiator).
 - Instalar la [herramienta de línea de comandos de Gatsby](https://www.gatsbyjs.org/docs/).
 - (Opcional) Tener a la mano tu API Key de Meetup (podés conseguirlo [aquí](https://secure.meetup.com/meetup_api/key/), **recordá no compartirlo**).
 
