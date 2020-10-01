@@ -4,7 +4,7 @@
 
 El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo ser una herramienta para promocionar y compartir el contenido de la comunidad. El sitio está hecho con [React](https://reactjs.org/) y [Gatsby](https://www.gatsbyjs.org/) v1.
 
-## Prerrequisitos
+## Prer-requisitos
 
 - Tener instalado [Node](https://nodejs.org/es/) v8.0.0+ y [Yarn](https://yarnpkg.com/es-ES/) v1.2.0+.
 - Instalar la [herramienta de línea de comandos de Gatsby](https://www.gatsbyjs.org/docs/).
