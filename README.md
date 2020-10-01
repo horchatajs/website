@@ -1,4 +1,4 @@
-# Website
+# Website - the amazing project
 
 > Sitio web oficial de la comunidad HorchataJS
 
