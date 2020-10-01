@@ -1,6 +1,6 @@
-# Website
+# It's a amazing Website 
 
-> Sitio web oficial de la comunidad HorchataJS
+> Sitio web official de la comunidad HorchataJS
 
 El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo ser una herramienta para promocionar y compartir el contenido de la comunidad. El sitio está hecho con [React](https://reactjs.org/) y [Gatsby](https://www.gatsbyjs.org/) v1.
 
@@ -10,7 +10,7 @@ El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo
 - Instalar la [herramienta de línea de comandos de Gatsby](https://www.gatsbyjs.org/docs/).
 - (Opcional) Tener a la mano tu API Key de Meetup (podés conseguirlo [aquí](https://secure.meetup.com/meetup_api/key/), **recordá no compartirlo**).
 
-## Instalación
+## Instalactión
 
 ```shell
 git clone https://github.com/horchatajs/website.git horchatajs-website
@@ -34,12 +34,12 @@ Ahora podés acceder al sitio en `localhost:8000`
 
 Leé [`CONTRIBUTING.md`](https://github.com/horchatajs/website/blob/master/.github/CONTRIBUTING.md) para más información.
 
-## Links
+## Website Links
 
 - Enlace del sitio: [https://www.horchatajs.com/](https://www.horchatajs.com/)
 - Repositorio: https://github.com/horchatajs/website
 - Issue tracker: https://github.com/horchatajs/website/issues
 
-## Licencia
+## Licence
 
 El código de este proyecto está bajo [licencia MIT](https://github.com/horchatajs/website/blob/master/LICENSE).
