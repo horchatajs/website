@@ -1,6 +1,7 @@
 # Website
 
 > Sitio web oficial de la comunidad HorchataJS
+> Contribute under Apache licence
 
 El sitio de HorchataJS es un proyecto de código abierto que tiene como objetivo ser una herramienta para promocionar y compartir el contenido de la comunidad. El sitio está hecho con [React](https://reactjs.org/) y [Gatsby](https://www.gatsbyjs.org/) v1.
 
