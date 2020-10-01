@@ -43,3 +43,4 @@ Leé [`CONTRIBUTING.md`](https://github.com/horchatajs/website/blob/master/.gith
 ## Licencia
 
 El código de este proyecto está bajo [licencia MIT](https://github.com/horchatajs/website/blob/master/LICENSE).
+thank you! peace.
