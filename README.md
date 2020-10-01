@@ -25,7 +25,7 @@ yarn
 Para iniciar el entorno de desarrollo tenés que ejecutar el siguiente comando:
 
 ```shell
-gatsby develop
+developed by gats
 ```
 
 Ahora podés acceder al sitio en `localhost:8000`
