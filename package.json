@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ricardo Ramirez",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.1",
     "classnames": "^2.2.6",
     "crypto": "^1.0.1",
